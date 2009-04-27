@@ -1,0 +1,4361 @@
+  [4;36;1mSQL (23.9ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (19.4ms)[0m   [0mselect sqlite_version(*)[0m
+  [4;36;1mSQL (2.5ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (2.4ms)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateArticles (20090427014906)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mCREATE TABLE "articles" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "body" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20090427014906')[0m
+  [4;35;1mSQL (0.4ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("articles")[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-26 21:51:06) [GET]
+
+ActionController::RoutingError (No route matches "/" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-04-26 21:51:27) [GET]
+  [4;36;1mArticle Load (0.4ms)[0m   [0;1mSELECT * FROM "articles" [0m
+Rendering template within layouts/articles
+Rendering articles/index
+Completed in 91ms (View: 86, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-26 21:52:21) [GET]
+
+ActionController::RoutingError (No route matches "/Frameworks/AppKit/AppKit.j" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-26 21:52:21) [GET]
+
+ActionController::RoutingError (No route matches "/Frameworks/Foundation/Foundation.j" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-26 21:54:10) [GET]
+
+ActionController::RoutingError (No route matches "/Frameworks/AppKit/AppKit.j" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-26 21:54:10) [GET]
+
+ActionController::RoutingError (No route matches "/Frameworks/Foundation/Foundation.j" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-04-26 21:54:34) [GET]
+  [4;36;1mArticle Load (0.4ms)[0m   [0;1mSELECT * FROM "articles" [0m
+Rendering template within layouts/articles
+Rendering articles/index
+Completed in 17ms (View: 12, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-26 21:54:35) [GET]
+
+ActionController::RoutingError (No route matches "/Frameworks/AppKit/AppKit.j" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-26 21:54:35) [GET]
+
+ActionController::RoutingError (No route matches "/Frameworks/Foundation/Foundation.j" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-04-26 21:56:21) [GET]
+  [4;35;1mArticle Load (0.4ms)[0m   [0mSELECT * FROM "articles" [0m
+Rendering template within layouts/articles
+Rendering articles/index
+Completed in 12ms (View: 8, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing ArticlesController#new (for 127.0.0.1 at 2009-04-26 21:56:29) [GET]
+Rendering template within layouts/articles
+Rendering articles/new
+Completed in 48ms (View: 42, DB: 0) | 200 OK [http://localhost/articles/new]
+
+
+Processing ArticlesController#create (for 127.0.0.1 at 2009-04-26 21:56:45) [POST]
+  Parameters: {"article"=>{"body"=>"First Article Body", "title"=>"First Article Title"}, "commit"=>"Create", "authenticity_token"=>"2p2cvarqhIDJohLVxk6kDzlTJCm/8Q4c1TNofuIiw7s="}
+  [4;36;1mArticle Create (0.5ms)[0m   [0;1mINSERT INTO "articles" ("updated_at", "title", "body", "created_at") VALUES('2009-04-27 01:56:45', 'First Article Title', 'First Article Body', '2009-04-27 01:56:45')[0m
+Redirected to http://localhost:3000/articles/1
+Completed in 42ms (DB: 0) | 302 Found [http://localhost/articles]
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2009-04-26 21:56:45) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mArticle Load (0.4ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."id" = 1) [0m
+Rendering template within layouts/articles
+Rendering articles/show
+Completed in 11ms (View: 5, DB: 0) | 200 OK [http://localhost/articles/1]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-04-26 21:56:47) [GET]
+  [4;36;1mArticle Load (0.5ms)[0m   [0;1mSELECT * FROM "articles" [0m
+Rendering template within layouts/articles
+Rendering articles/index
+Completed in 8ms (View: 4, DB: 0) | 200 OK [http://localhost/articles]
+
+
+Processing ArticlesController#show to xml (for 127.0.0.1 at 2009-04-26 21:56:59) [GET]
+  Parameters: {"id"=>"index"}
+  [4;35;1mArticle Load (0.2ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."id" = 0) [0m
+
+ActiveRecord::RecordNotFound (Couldn't find Article with ID=index):
+  app/controllers/articles_controller.rb:16:in `show'
+
+Rendered rescues/_trace (92.1ms)
+Rendered rescues/_request_and_response (1.8ms)
+Rendering rescues/layout (not_found)
+
+
+Processing ArticlesController#index to xml (for 127.0.0.1 at 2009-04-26 21:57:20) [GET]
+  [4;36;1mArticle Load (0.5ms)[0m   [0;1mSELECT * FROM "articles" [0m
+Completed in 228ms (View: 221, DB: 0) | 200 OK [http://localhost/articles.xml]
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2009-04-26 21:58:50) [GET]
+  Parameters: {"id"=>"cap"}
+  [4;35;1mArticle Load (0.2ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."id" = 0) [0m
+
+ActiveRecord::RecordNotFound (Couldn't find Article with ID=cap):
+  app/controllers/articles_controller.rb:20:in `show'
+
+Rendered rescues/_trace (42.5ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (not_found)
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2009-04-26 21:58:54) [GET]
+  Parameters: {"id"=>"capp"}
+  [4;36;1mArticle Load (0.3ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles"."id" = 0) [0m
+
+ActiveRecord::RecordNotFound (Couldn't find Article with ID=capp):
+  app/controllers/articles_controller.rb:20:in `show'
+
+Rendered rescues/_trace (35.7ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.6ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateArticles (20090427014906)
+Migrating to CreateCapps (20090427015940)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mCREATE TABLE "capps" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20090427015940')[0m
+  [4;35;1mSQL (0.5ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("articles")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("capps")[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-26 22:00:36) [GET]
+
+ActionController::RoutingError (No route matches "/capp" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing CappsController#index (for 127.0.0.1 at 2009-04-26 22:01:09) [GET]
+  [4;36;1mCapp Load (0.4ms)[0m   [0;1mSELECT * FROM "capps" [0m
+Rendering template within layouts/capps
+Rendering capps/index
+Completed in 19ms (View: 14, DB: 0) | 200 OK [http://localhost/capps]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-26 22:01:09) [GET]
+
+ActionController::RoutingError (No route matches "/Frameworks/AppKit/AppKit.j" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-26 22:01:09) [GET]
+
+ActionController::RoutingError (No route matches "/Frameworks/Foundation/Foundation.j" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing CappsController#index (for 127.0.0.1 at 2009-04-26 22:01:33) [GET]
+  [4;35;1mCapp Load (0.5ms)[0m   [0mSELECT * FROM "capps" [0m
+Rendering template within layouts/capps
+Rendering capps/index
+Completed in 7ms (View: 2, DB: 0) | 200 OK [http://localhost/capps]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-26 22:01:33) [GET]
+
+ActionController::RoutingError (No route matches "/Frameworks/AppKit/AppKit.j" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-26 22:01:34) [GET]
+
+ActionController::RoutingError (No route matches "/Frameworks/Foundation/Foundation.j" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing CappsController#index (for 127.0.0.1 at 2009-04-26 22:01:49) [GET]
+  [4;36;1mCapp Load (0.5ms)[0m   [0;1mSELECT * FROM "capps" [0m
+Rendering template within layouts/capps
+Rendering capps/index
+Completed in 10ms (View: 5, DB: 0) | 200 OK [http://localhost/capps]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-26 22:01:49) [GET]
+
+ActionController::RoutingError (No route matches "/Frameworks/AppKit/AppKit.j" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-26 22:01:49) [GET]
+
+ActionController::RoutingError (No route matches "/Frameworks/Foundation/Foundation.j" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing CappsController#index (for 127.0.0.1 at 2009-04-26 22:02:33) [GET]
+  [4;35;1mCapp Load (0.4ms)[0m   [0mSELECT * FROM "capps" [0m
+Rendering template within layouts/capps
+Rendering capps/index
+Completed in 6ms (View: 1, DB: 0) | 200 OK [http://localhost/capps]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-26 22:02:33) [GET]
+
+ActionController::RoutingError (No route matches "/Frameworks/AppKit/AppKit.j" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-26 22:02:33) [GET]
+
+ActionController::RoutingError (No route matches "/Frameworks/Foundation/Foundation.j" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ArticlesController#index to json (for 127.0.0.1 at 2009-04-26 22:03:36) [GET]
+  [4;36;1mArticle Load (0.8ms)[0m   [0;1mSELECT * FROM "articles" [0m
+Completed in 108ms (View: 102, DB: 1) | 200 OK [http://localhost/articles.json]
+
+
+Processing CappsController#index (for 127.0.0.1 at 2009-04-26 22:06:08) [GET]
+  [4;35;1mCapp Load (0.4ms)[0m   [0mSELECT * FROM "capps" [0m
+Rendering template within layouts/capps
+Rendering capps/index
+Completed in 6ms (View: 1, DB: 0) | 200 OK [http://localhost/capps]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-26 22:06:08) [GET]
+
+ActionController::RoutingError (No route matches "/Frameworks/AppKit/AppKit.j" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-26 22:06:08) [GET]
+
+ActionController::RoutingError (No route matches "/Frameworks/Foundation/Foundation.j" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing CappsController#index (for 127.0.0.1 at 2009-04-26 22:06:51) [GET]
+  [4;36;1mCapp Load (0.3ms)[0m   [0;1mSELECT * FROM "capps" [0m
+Rendering template within layouts/capps
+Rendering capps/index
+Completed in 5ms (View: 1, DB: 0) | 200 OK [http://localhost/capps]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-26 22:06:51) [GET]
+
+ActionController::RoutingError (No route matches "/Frameworks/AppKit/AppKit.j" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-26 22:06:51) [GET]
+
+ActionController::RoutingError (No route matches "/Frameworks/Foundation/Foundation.j" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing CappsController#index (for 127.0.0.1 at 2009-04-26 22:08:17) [GET]
+  [4;35;1mCapp Load (0.3ms)[0m   [0mSELECT * FROM "capps" [0m
+Rendering template within layouts/capps
+Rendering capps/index
+Completed in 5ms (View: 1, DB: 0) | 200 OK [http://localhost/capps]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-26 22:08:17) [GET]
+
+ActionController::RoutingError (No route matches "/Frameworks/AppKit/AppKit.j" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-26 22:08:17) [GET]
+
+ActionController::RoutingError (No route matches "/Frameworks/Foundation/Foundation.j" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing CappsController#index (for 127.0.0.1 at 2009-04-26 22:09:07) [GET]
+  [4;36;1mCapp Load (0.5ms)[0m   [0;1mSELECT * FROM "capps" [0m
+Rendering template within layouts/capps
+Rendering capps/index
+Completed in 6ms (View: 1, DB: 0) | 200 OK [http://localhost/capps]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-26 22:09:07) [GET]
+
+ActionController::RoutingError (No route matches "/Frameworks/AppKit/AppKit.j" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-26 22:09:07) [GET]
+
+ActionController::RoutingError (No route matches "/Frameworks/Foundation/Foundation.j" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing CappsController#index (for 127.0.0.1 at 2009-04-26 22:11:31) [GET]
+  [4;35;1mCapp Load (0.4ms)[0m   [0mSELECT * FROM "capps" [0m
+Rendering template within layouts/capps
+Rendering capps/index
+Completed in 6ms (View: 1, DB: 0) | 200 OK [http://localhost/capps]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-26 22:11:32) [GET]
+
+ActionController::RoutingError (No route matches "/Frameworks/AppKit/AppKit.j" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-26 22:11:32) [GET]
+
+ActionController::RoutingError (No route matches "/Frameworks/Foundation/Foundation.j" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ArticlesController#index to json (for 127.0.0.1 at 2009-04-26 22:11:36) [GET]
+  Parameters: {"callback"=>"CPJSONPConnectionCallbacks.callback3250"}
+  [4;36;1mArticle Load (0.5ms)[0m   [0;1mSELECT * FROM "articles" [0m
+Completed in 8ms (View: 3, DB: 1) | 200 OK [http://localhost/articles.json?callback=CPJSONPConnectionCallbacks.callback3250]
+
+
+Processing ArticlesController#index to json (for 127.0.0.1 at 2009-04-26 22:11:42) [GET]
+  Parameters: {"callback"=>"CPJSONPConnectionCallbacks.callback3356"}
+  [4;35;1mArticle Load (0.5ms)[0m   [0mSELECT * FROM "articles" [0m
+Completed in 7ms (View: 3, DB: 0) | 200 OK [http://localhost/articles.json?callback=CPJSONPConnectionCallbacks.callback3356]
+
+
+Processing ArticlesController#index to json (for 127.0.0.1 at 2009-04-26 22:11:44) [GET]
+  Parameters: {"callback"=>"CPJSONPConnectionCallbacks.callback3362"}
+  [4;36;1mArticle Load (0.6ms)[0m   [0;1mSELECT * FROM "articles" [0m
+Completed in 11ms (View: 3, DB: 1) | 200 OK [http://localhost/articles.json?callback=CPJSONPConnectionCallbacks.callback3362]
+
+
+Processing ArticlesController#index to json (for 127.0.0.1 at 2009-04-26 22:11:45) [GET]
+  Parameters: {"callback"=>"CPJSONPConnectionCallbacks.callback3367"}
+  [4;35;1mArticle Load (0.8ms)[0m   [0mSELECT * FROM "articles" [0m
+Completed in 9ms (View: 3, DB: 1) | 200 OK [http://localhost/articles.json?callback=CPJSONPConnectionCallbacks.callback3367]
+
+
+Processing CappsController#index (for 127.0.0.1 at 2009-04-26 22:12:17) [GET]
+  [4;36;1mCapp Load (0.3ms)[0m   [0;1mSELECT * FROM "capps" [0m
+Rendering template within layouts/capps
+Rendering capps/index
+Completed in 5ms (View: 1, DB: 0) | 200 OK [http://localhost/capps]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-26 22:12:17) [GET]
+
+ActionController::RoutingError (No route matches "/Frameworks/AppKit/AppKit.j" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-26 22:12:17) [GET]
+
+ActionController::RoutingError (No route matches "/Frameworks/Foundation/Foundation.j" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ArticlesController#index to json (for 127.0.0.1 at 2009-04-26 22:12:21) [GET]
+  Parameters: {"callback"=>"CPJSONPConnectionCallbacks.callback3363"}
+  [4;35;1mArticle Load (0.5ms)[0m   [0mSELECT * FROM "articles" [0m
+Completed in 8ms (View: 3, DB: 1) | 200 OK [http://localhost/articles.json?callback=CPJSONPConnectionCallbacks.callback3363]
+
+
+Processing ArticlesController#index to json (for 127.0.0.1 at 2009-04-26 22:12:26) [GET]
+  Parameters: {"callback"=>"CPJSONPConnectionCallbacks.callback3434"}
+  [4;36;1mArticle Load (0.7ms)[0m   [0;1mSELECT * FROM "articles" [0m
+Completed in 9ms (View: 3, DB: 1) | 200 OK [http://localhost/articles.json?callback=CPJSONPConnectionCallbacks.callback3434]
+
+
+Processing ArticlesController#index to json (for 127.0.0.1 at 2009-04-26 22:12:29) [GET]
+  Parameters: {"callback"=>"CPJSONPConnectionCallbacks.callback3439"}
+  [4;35;1mArticle Load (1.2ms)[0m   [0mSELECT * FROM "articles" [0m
+Completed in 10ms (View: 4, DB: 1) | 200 OK [http://localhost/articles.json?callback=CPJSONPConnectionCallbacks.callback3439]
+
+
+Processing ArticlesController#index to json (for 127.0.0.1 at 2009-04-26 22:12:29) [GET]
+  Parameters: {"callback"=>"CPJSONPConnectionCallbacks.callback3444"}
+  [4;36;1mArticle Load (0.5ms)[0m   [0;1mSELECT * FROM "articles" [0m
+Completed in 9ms (View: 3, DB: 1) | 200 OK [http://localhost/articles.json?callback=CPJSONPConnectionCallbacks.callback3444]
+
+
+Processing CappsController#index (for 127.0.0.1 at 2009-04-26 22:13:15) [GET]
+  [4;35;1mCapp Load (0.4ms)[0m   [0mSELECT * FROM "capps" [0m
+Rendering template within layouts/capps
+Rendering capps/index
+Completed in 7ms (View: 1, DB: 0) | 200 OK [http://localhost/capps]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-26 22:13:15) [GET]
+
+ActionController::RoutingError (No route matches "/Frameworks/AppKit/AppKit.j" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-26 22:13:15) [GET]
+
+ActionController::RoutingError (No route matches "/Frameworks/Foundation/Foundation.j" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ArticlesController#index to json (for 127.0.0.1 at 2009-04-26 22:13:28) [GET]
+  Parameters: {"callback"=>"CPJSONPConnectionCallbacks.callback3364"}
+  [4;36;1mArticle Load (0.6ms)[0m   [0;1mSELECT * FROM "articles" [0m
+Completed in 9ms (View: 3, DB: 1) | 200 OK [http://localhost/articles.json?callback=CPJSONPConnectionCallbacks.callback3364]
+
+
+Processing ArticlesController#index to json (for 127.0.0.1 at 2009-04-26 22:13:29) [GET]
+  Parameters: {"callback"=>"CPJSONPConnectionCallbacks.callback3369"}
+  [4;35;1mArticle Load (0.5ms)[0m   [0mSELECT * FROM "articles" [0m
+Completed in 8ms (View: 3, DB: 0) | 200 OK [http://localhost/articles.json?callback=CPJSONPConnectionCallbacks.callback3369]
+
+
+Processing ArticlesController#index to json (for 127.0.0.1 at 2009-04-26 22:13:30) [GET]
+  Parameters: {"callback"=>"CPJSONPConnectionCallbacks.callback3374"}
+  [4;36;1mArticle Load (0.6ms)[0m   [0;1mSELECT * FROM "articles" [0m
+Completed in 8ms (View: 3, DB: 1) | 200 OK [http://localhost/articles.json?callback=CPJSONPConnectionCallbacks.callback3374]
+
+
+Processing ArticlesController#index to json (for 127.0.0.1 at 2009-04-26 22:13:31) [GET]
+  Parameters: {"callback"=>"CPJSONPConnectionCallbacks.callback3379"}
+  [4;35;1mArticle Load (0.6ms)[0m   [0mSELECT * FROM "articles" [0m
+Completed in 9ms (View: 4, DB: 1) | 200 OK [http://localhost/articles.json?callback=CPJSONPConnectionCallbacks.callback3379]
+
+
+Processing ArticlesController#index to json (for 127.0.0.1 at 2009-04-26 22:13:32) [GET]
+  Parameters: {"callback"=>"CPJSONPConnectionCallbacks.callback3384"}
+  [4;36;1mArticle Load (0.5ms)[0m   [0;1mSELECT * FROM "articles" [0m
+Completed in 10ms (View: 3, DB: 1) | 200 OK [http://localhost/articles.json?callback=CPJSONPConnectionCallbacks.callback3384]
+
+
+Processing ArticlesController#index to json (for 127.0.0.1 at 2009-04-26 22:13:33) [GET]
+  Parameters: {"callback"=>"CPJSONPConnectionCallbacks.callback3389"}
+  [4;35;1mArticle Load (0.6ms)[0m   [0mSELECT * FROM "articles" [0m
+Completed in 8ms (View: 3, DB: 1) | 200 OK [http://localhost/articles.json?callback=CPJSONPConnectionCallbacks.callback3389]
+
+
+Processing ArticlesController#index to json (for 127.0.0.1 at 2009-04-26 22:13:33) [GET]
+  Parameters: {"callback"=>"CPJSONPConnectionCallbacks.callback3394"}
+  [4;36;1mArticle Load (0.8ms)[0m   [0;1mSELECT * FROM "articles" [0m
+Completed in 10ms (View: 3, DB: 1) | 200 OK [http://localhost/articles.json?callback=CPJSONPConnectionCallbacks.callback3394]
+
+
+Processing ArticlesController#index to json (for 127.0.0.1 at 2009-04-26 22:13:34) [GET]
+  Parameters: {"callback"=>"CPJSONPConnectionCallbacks.callback3399"}
+  [4;35;1mArticle Load (0.5ms)[0m   [0mSELECT * FROM "articles" [0m
+Completed in 7ms (View: 3, DB: 0) | 200 OK [http://localhost/articles.json?callback=CPJSONPConnectionCallbacks.callback3399]
+
+
+Processing ArticlesController#index to json (for 127.0.0.1 at 2009-04-26 22:13:34) [GET]
+  Parameters: {"callback"=>"CPJSONPConnectionCallbacks.callback3404"}
+  [4;36;1mArticle Load (0.6ms)[0m   [0;1mSELECT * FROM "articles" [0m
+Completed in 9ms (View: 3, DB: 1) | 200 OK [http://localhost/articles.json?callback=CPJSONPConnectionCallbacks.callback3404]
+
+
+Processing ArticlesController#index to json (for 127.0.0.1 at 2009-04-26 22:13:35) [GET]
+  Parameters: {"callback"=>"CPJSONPConnectionCallbacks.callback3409"}
+  [4;35;1mArticle Load (0.8ms)[0m   [0mSELECT * FROM "articles" [0m
+Completed in 9ms (View: 3, DB: 1) | 200 OK [http://localhost/articles.json?callback=CPJSONPConnectionCallbacks.callback3409]
+
+
+Processing ArticlesController#index to json (for 127.0.0.1 at 2009-04-26 22:13:35) [GET]
+  Parameters: {"callback"=>"CPJSONPConnectionCallbacks.callback3414"}
+  [4;36;1mArticle Load (0.6ms)[0m   [0;1mSELECT * FROM "articles" [0m
+Completed in 9ms (View: 3, DB: 1) | 200 OK [http://localhost/articles.json?callback=CPJSONPConnectionCallbacks.callback3414]
+
+
+Processing CappsController#index (for 127.0.0.1 at 2009-04-26 22:14:08) [GET]
+  [4;35;1mCapp Load (0.4ms)[0m   [0mSELECT * FROM "capps" [0m
+Rendering template within layouts/capps
+Rendering capps/index
+Completed in 72ms (View: 1, DB: 0) | 200 OK [http://localhost/capps]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-26 22:14:08) [GET]
+
+ActionController::RoutingError (No route matches "/Frameworks/AppKit/AppKit.j" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-26 22:14:08) [GET]
+
+ActionController::RoutingError (No route matches "/Frameworks/Foundation/Foundation.j" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ArticlesController#index to json (for 127.0.0.1 at 2009-04-26 22:14:28) [GET]
+  Parameters: {"callback"=>"CPJSONPConnectionCallbacks.callback3357"}
+  [4;36;1mArticle Load (0.5ms)[0m   [0;1mSELECT * FROM "articles" [0m
+Completed in 7ms (View: 3, DB: 1) | 200 OK [http://localhost/articles.json?callback=CPJSONPConnectionCallbacks.callback3357]
+
+
+Processing ArticlesController#index to json (for 127.0.0.1 at 2009-04-26 22:16:50) [GET]
+  [4;35;1mArticle Load (0.6ms)[0m   [0mSELECT * FROM "articles" [0m
+Completed in 9ms (View: 3, DB: 1) | 200 OK [http://localhost/articles.json]
+
+
+Processing CappsController#index (for 127.0.0.1 at 2009-04-26 22:24:07) [GET]
+  [4;36;1mCapp Load (0.4ms)[0m   [0;1mSELECT * FROM "capps" [0m
+Rendering template within layouts/capps
+Rendering capps/index
+Completed in 6ms (View: 1, DB: 0) | 200 OK [http://localhost/capps]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-26 22:24:08) [GET]
+
+ActionController::RoutingError (No route matches "/Frameworks/AppKit/AppKit.j" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-26 22:24:08) [GET]
+
+ActionController::RoutingError (No route matches "/Frameworks/Foundation/Foundation.j" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ArticlesController#index to json (for 127.0.0.1 at 2009-04-26 22:24:12) [GET]
+  Parameters: {"callback"=>"CPJSONPConnectionCallbacks.callback3251"}
+  [4;35;1mArticle Load (0.5ms)[0m   [0mSELECT * FROM "articles" [0m
+Completed in 8ms (View: 3, DB: 1) | 200 OK [http://localhost/articles.json?callback=CPJSONPConnectionCallbacks.callback3251]
+
+
+Processing ArticlesController#index to json (for 127.0.0.1 at 2009-04-26 22:24:36) [GET]
+  Parameters: {"callback"=>"CPJSONPConnectionCallbacks.callback3251"}
+  [4;36;1mArticle Load (1.2ms)[0m   [0;1mSELECT * FROM "articles" [0m
+Completed in 10ms (View: 3, DB: 1) | 200 OK [http://localhost/articles.json?callback=CPJSONPConnectionCallbacks.callback3251]
+
+
+Processing CappsController#index (for 127.0.0.1 at 2009-04-26 22:27:19) [GET]
+  [4;35;1mCapp Load (0.5ms)[0m   [0mSELECT * FROM "capps" [0m
+Rendering template within layouts/capps
+Rendering capps/index
+Completed in 7ms (View: 1, DB: 1) | 200 OK [http://localhost/capps]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-26 22:27:20) [GET]
+
+ActionController::RoutingError (No route matches "/Frameworks/AppKit/AppKit.j" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-26 22:27:20) [GET]
+
+ActionController::RoutingError (No route matches "/Frameworks/Foundation/Foundation.j" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ArticlesController#index to js (for 127.0.0.1 at 2009-04-26 22:27:24) [GET]
+  Parameters: {"callback"=>"CPJSONPConnectionCallbacks.callback3259"}
+  [4;36;1mArticle Load (0.9ms)[0m   [0;1mSELECT * FROM "articles" [0m
+Completed in 8ms (View: 1, DB: 1) | 200 OK [http://localhost/articles.js?callback=CPJSONPConnectionCallbacks.callback3259]
+
+
+Processing ArticlesController#index to js (for 127.0.0.1 at 2009-04-26 22:27:41) [GET]
+  Parameters: {"callback"=>"CPJSONPConnectionCallbacks.callback3259"}
+  [4;35;1mArticle Load (0.5ms)[0m   [0mSELECT * FROM "articles" [0m
+Completed in 8ms (View: 1, DB: 0) | 200 OK [http://localhost/articles.js?callback=CPJSONPConnectionCallbacks.callback3259]
+
+
+Processing CappsController#index (for 127.0.0.1 at 2009-04-26 22:29:24) [GET]
+  [4;36;1mCapp Load (0.4ms)[0m   [0;1mSELECT * FROM "capps" [0m
+Rendering template within layouts/capps
+Rendering capps/index
+Completed in 6ms (View: 1, DB: 0) | 200 OK [http://localhost/capps]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-26 22:29:24) [GET]
+
+ActionController::RoutingError (No route matches "/Frameworks/AppKit/AppKit.j" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-26 22:29:24) [GET]
+
+ActionController::RoutingError (No route matches "/Frameworks/Foundation/Foundation.j" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ArticlesController#index to js (for 127.0.0.1 at 2009-04-26 22:29:32) [GET]
+  Parameters: {"callback"=>"CPJSONPConnectionCallbacks.callback3318"}
+  [4;35;1mArticle Load (0.5ms)[0m   [0mSELECT * FROM "articles" [0m
+Completed in 8ms (View: 1, DB: 1) | 200 OK [http://localhost/articles.js?callback=CPJSONPConnectionCallbacks.callback3318]
+
+
+Processing CappsController#index (for 127.0.0.1 at 2009-04-26 22:32:29) [GET]
+  [4;36;1mCapp Load (0.4ms)[0m   [0;1mSELECT * FROM "capps" [0m
+Rendering template within layouts/capps
+Rendering capps/index
+Completed in 6ms (View: 1, DB: 0) | 200 OK [http://localhost/capps]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-26 22:32:29) [GET]
+
+ActionController::RoutingError (No route matches "/Frameworks/AppKit/AppKit.j" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-26 22:32:30) [GET]
+
+ActionController::RoutingError (No route matches "/Frameworks/Foundation/Foundation.j" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ArticlesController#index to js (for 127.0.0.1 at 2009-04-26 22:32:37) [GET]
+  Parameters: {"callback"=>"CPJSONPConnectionCallbacks.callback3375"}
+  [4;35;1mArticle Load (0.5ms)[0m   [0mSELECT * FROM "articles" [0m
+Completed in 8ms (View: 1, DB: 1) | 200 OK [http://localhost/articles.js?callback=CPJSONPConnectionCallbacks.callback3375]
+
+
+Processing ArticlesController#index to js (for 127.0.0.1 at 2009-04-26 22:32:42) [GET]
+  Parameters: {"callback"=>"CPJSONPConnectionCallbacks.callback3432"}
+  [4;36;1mArticle Load (0.5ms)[0m   [0;1mSELECT * FROM "articles" [0m
+Completed in 10ms (View: 1, DB: 1) | 200 OK [http://localhost/articles.js?callback=CPJSONPConnectionCallbacks.callback3432]
+
+
+Processing ArticlesController#index to js (for 127.0.0.1 at 2009-04-26 22:32:45) [GET]
+  Parameters: {"callback"=>"CPJSONPConnectionCallbacks.callback3438"}
+  [4;35;1mArticle Load (0.5ms)[0m   [0mSELECT * FROM "articles" [0m
+Completed in 12ms (View: 1, DB: 1) | 200 OK [http://localhost/articles.js?callback=CPJSONPConnectionCallbacks.callback3438]
+
+
+Processing ArticlesController#index to js (for 127.0.0.1 at 2009-04-26 22:33:21) [GET]
+  Parameters: {"callback"=>"CPJSONPConnectionCallbacks.callback3438"}
+  [4;36;1mArticle Load (0.6ms)[0m   [0;1mSELECT * FROM "articles" [0m
+Completed in 8ms (View: 1, DB: 1) | 200 OK [http://localhost/articles.js?callback=CPJSONPConnectionCallbacks.callback3438]
+
+
+Processing CappsController#index (for 127.0.0.1 at 2009-04-26 22:35:42) [GET]
+  [4;35;1mCapp Load (0.4ms)[0m   [0mSELECT * FROM "capps" [0m
+Rendering template within layouts/capps
+Rendering capps/index
+Completed in 5ms (View: 1, DB: 0) | 200 OK [http://localhost/capps]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-26 22:35:43) [GET]
+
+ActionController::RoutingError (No route matches "/Frameworks/AppKit/AppKit.j" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-26 22:35:43) [GET]
+
+ActionController::RoutingError (No route matches "/Frameworks/Foundation/Foundation.j" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ArticlesController#index to js (for 127.0.0.1 at 2009-04-26 22:35:48) [GET]
+  Parameters: {"callback"=>"CPJSONPConnectionCallbacks.callback3389"}
+  [4;36;1mArticle Load (0.5ms)[0m   [0;1mSELECT * FROM "articles" [0m
+Completed in 8ms (View: 1, DB: 1) | 200 OK [http://localhost/articles.js?callback=CPJSONPConnectionCallbacks.callback3389]
+
+
+Processing CappsController#index (for 127.0.0.1 at 2009-04-26 22:36:14) [GET]
+  [4;35;1mCapp Load (0.4ms)[0m   [0mSELECT * FROM "capps" [0m
+Rendering template within layouts/capps
+Rendering capps/index
+Completed in 6ms (View: 1, DB: 0) | 200 OK [http://localhost/capps]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-26 22:36:14) [GET]
+
+ActionController::RoutingError (No route matches "/Frameworks/AppKit/AppKit.j" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-26 22:36:14) [GET]
+
+ActionController::RoutingError (No route matches "/Frameworks/Foundation/Foundation.j" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ArticlesController#index to js (for 127.0.0.1 at 2009-04-26 22:36:19) [GET]
+  Parameters: {"callback"=>"CPJSONPConnectionCallbacks.callback3250"}
+  [4;36;1mArticle Load (0.7ms)[0m   [0;1mSELECT * FROM "articles" [0m
+Completed in 8ms (View: 1, DB: 1) | 200 OK [http://localhost/articles.js?callback=CPJSONPConnectionCallbacks.callback3250]
+
+
+Processing CappsController#index (for 127.0.0.1 at 2009-04-26 22:36:37) [GET]
+  [4;35;1mCapp Load (0.3ms)[0m   [0mSELECT * FROM "capps" [0m
+Rendering template within layouts/capps
+Rendering capps/index
+Completed in 6ms (View: 1, DB: 0) | 200 OK [http://localhost/capps]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-26 22:36:37) [GET]
+
+ActionController::RoutingError (No route matches "/Frameworks/AppKit/AppKit.j" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-26 22:36:37) [GET]
+
+ActionController::RoutingError (No route matches "/Frameworks/Foundation/Foundation.j" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ArticlesController#index to js (for 127.0.0.1 at 2009-04-26 22:36:42) [GET]
+  Parameters: {"callback"=>"CPJSONPConnectionCallbacks.callback3339"}
+  [4;36;1mArticle Load (0.5ms)[0m   [0;1mSELECT * FROM "articles" [0m
+Completed in 7ms (View: 1, DB: 1) | 200 OK [http://localhost/articles.js?callback=CPJSONPConnectionCallbacks.callback3339]
+
+
+Processing ArticlesController#index to js (for 127.0.0.1 at 2009-04-26 22:36:46) [GET]
+  Parameters: {"callback"=>"CPJSONPConnectionCallbacks.callback3359"}
+  [4;35;1mArticle Load (0.7ms)[0m   [0mSELECT * FROM "articles" [0m
+Completed in 11ms (View: 2, DB: 1) | 200 OK [http://localhost/articles.js?callback=CPJSONPConnectionCallbacks.callback3359]
+
+
+Processing ArticlesController#index to js (for 127.0.0.1 at 2009-04-26 22:36:57) [GET]
+  Parameters: {"callback"=>"CPJSONPConnectionCallbacks.callback3400"}
+  [4;36;1mArticle Load (0.5ms)[0m   [0;1mSELECT * FROM "articles" [0m
+Completed in 8ms (View: 1, DB: 1) | 200 OK [http://localhost/articles.js?callback=CPJSONPConnectionCallbacks.callback3400]
+
+
+Processing CappsController#index (for 127.0.0.1 at 2009-04-26 22:37:23) [GET]
+  [4;35;1mCapp Load (0.4ms)[0m   [0mSELECT * FROM "capps" [0m
+Rendering template within layouts/capps
+Rendering capps/index
+Completed in 7ms (View: 1, DB: 0) | 200 OK [http://localhost/capps]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-26 22:37:23) [GET]
+
+ActionController::RoutingError (No route matches "/Frameworks/AppKit/AppKit.j" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-26 22:37:23) [GET]
+
+ActionController::RoutingError (No route matches "/Frameworks/Foundation/Foundation.j" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ArticlesController#index to js (for 127.0.0.1 at 2009-04-26 22:37:27) [GET]
+  Parameters: {"callback"=>"CPJSONPConnectionCallbacks.callback3350"}
+  [4;36;1mArticle Load (0.6ms)[0m   [0;1mSELECT * FROM "articles" [0m
+Completed in 7ms (View: 1, DB: 1) | 200 OK [http://localhost/articles.js?callback=CPJSONPConnectionCallbacks.callback3350]
+
+
+Processing CappsController#index (for 127.0.0.1 at 2009-04-26 22:37:49) [GET]
+  [4;35;1mCapp Load (0.4ms)[0m   [0mSELECT * FROM "capps" [0m
+Rendering template within layouts/capps
+Rendering capps/index
+Completed in 5ms (View: 1, DB: 0) | 200 OK [http://localhost/capps]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-26 22:37:49) [GET]
+
+ActionController::RoutingError (No route matches "/Frameworks/AppKit/AppKit.j" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-26 22:37:50) [GET]
+
+ActionController::RoutingError (No route matches "/Frameworks/Foundation/Foundation.j" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ArticlesController#index to js (for 127.0.0.1 at 2009-04-26 22:37:54) [GET]
+  Parameters: {"callback"=>"CPJSONPConnectionCallbacks.callback3369"}
+  [4;36;1mArticle Load (0.6ms)[0m   [0;1mSELECT * FROM "articles" [0m
+Completed in 8ms (View: 1, DB: 1) | 200 OK [http://localhost/articles.js?callback=CPJSONPConnectionCallbacks.callback3369]
+
+
+Processing CappsController#index (for 127.0.0.1 at 2009-04-26 22:39:49) [GET]
+  [4;35;1mCapp Load (0.4ms)[0m   [0mSELECT * FROM "capps" [0m
+Rendering template within layouts/capps
+Rendering capps/index
+Completed in 6ms (View: 1, DB: 0) | 200 OK [http://localhost/capps]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-26 22:39:49) [GET]
+
+ActionController::RoutingError (No route matches "/Frameworks/AppKit/AppKit.j" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-26 22:39:49) [GET]
+
+ActionController::RoutingError (No route matches "/Frameworks/Foundation/Foundation.j" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ArticlesController#index to js (for 127.0.0.1 at 2009-04-26 22:39:54) [GET]
+  Parameters: {"callback"=>"CPJSONPConnectionCallbacks.callback3250"}
+  [4;36;1mArticle Load (0.6ms)[0m   [0;1mSELECT * FROM "articles" [0m
+Completed in 9ms (View: 1, DB: 1) | 200 OK [http://localhost/articles.js?callback=CPJSONPConnectionCallbacks.callback3250]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-04-26 22:40:25) [GET]
+  [4;35;1mArticle Load (0.6ms)[0m   [0mSELECT * FROM "articles" [0m
+Rendering template within layouts/articles
+Rendering articles/index
+Completed in 55ms (View: 48, DB: 1) | 200 OK [http://localhost/articles]
+
+
+Processing ArticlesController#new (for 127.0.0.1 at 2009-04-26 22:40:28) [GET]
+Rendering template within layouts/articles
+Rendering articles/new
+Completed in 15ms (View: 10, DB: 0) | 200 OK [http://localhost/articles/new]
+
+
+Processing ArticlesController#create (for 127.0.0.1 at 2009-04-26 22:40:39) [POST]
+  Parameters: {"article"=>{"body"=>"Second Article Body", "title"=>"Second Article Title"}, "commit"=>"Create", "authenticity_token"=>"2p2cvarqhIDJohLVxk6kDzlTJCm/8Q4c1TNofuIiw7s="}
+  [4;36;1mArticle Create (12.3ms)[0m   [0;1mINSERT INTO "articles" ("updated_at", "title", "body", "created_at") VALUES('2009-04-27 02:40:39', 'Second Article Title', 'Second Article Body', '2009-04-27 02:40:39')[0m
+Redirected to http://localhost:3000/articles/2
+Completed in 27ms (DB: 12) | 302 Found [http://localhost/articles]
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2009-04-26 22:40:39) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mArticle Load (0.2ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."id" = 2) [0m
+Rendering template within layouts/articles
+Rendering articles/show
+Completed in 27ms (View: 21, DB: 0) | 200 OK [http://localhost/articles/2]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-04-26 22:40:41) [GET]
+  [4;36;1mArticle Load (0.8ms)[0m   [0;1mSELECT * FROM "articles" [0m
+Rendering template within layouts/articles
+Rendering articles/index
+Completed in 13ms (View: 7, DB: 1) | 200 OK [http://localhost/articles]
+
+
+Processing CappsController#index (for 127.0.0.1 at 2009-04-26 22:40:46) [GET]
+  [4;35;1mCapp Load (0.5ms)[0m   [0mSELECT * FROM "capps" [0m
+Rendering template within layouts/capps
+Rendering capps/index
+Completed in 8ms (View: 1, DB: 0) | 200 OK [http://localhost/capps]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-26 22:40:47) [GET]
+
+ActionController::RoutingError (No route matches "/Frameworks/AppKit/AppKit.j" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-26 22:40:47) [GET]
+
+ActionController::RoutingError (No route matches "/Frameworks/Foundation/Foundation.j" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ArticlesController#index to js (for 127.0.0.1 at 2009-04-26 22:40:54) [GET]
+  Parameters: {"callback"=>"CPJSONPConnectionCallbacks.callback3365"}
+  [4;36;1mArticle Load (0.6ms)[0m   [0;1mSELECT * FROM "articles" [0m
+Completed in 8ms (View: 1, DB: 1) | 200 OK [http://localhost/articles.js?callback=CPJSONPConnectionCallbacks.callback3365]
+
+
+Processing CappsController#index (for 127.0.0.1 at 2009-04-26 22:41:13) [GET]
+  [4;35;1mCapp Load (0.4ms)[0m   [0mSELECT * FROM "capps" [0m
+Rendering template within layouts/capps
+Rendering capps/index
+Completed in 7ms (View: 3, DB: 0) | 200 OK [http://localhost/capps]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-26 22:41:13) [GET]
+
+ActionController::RoutingError (No route matches "/Frameworks/AppKit/AppKit.j" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-26 22:41:13) [GET]
+
+ActionController::RoutingError (No route matches "/Frameworks/Foundation/Foundation.j" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ArticlesController#index to js (for 127.0.0.1 at 2009-04-26 22:41:29) [GET]
+  Parameters: {"callback"=>"CPJSONPConnectionCallbacks.callback3400"}
+  [4;36;1mArticle Load (0.6ms)[0m   [0;1mSELECT * FROM "articles" [0m
+Completed in 8ms (View: 1, DB: 1) | 200 OK [http://localhost/articles.js?callback=CPJSONPConnectionCallbacks.callback3400]
+
+
+Processing ArticlesController#index to js (for 127.0.0.1 at 2009-04-26 22:41:46) [GET]
+  Parameters: {"callback"=>"CPJSONPConnectionCallbacks.callback3466"}
+  [4;35;1mArticle Load (0.8ms)[0m   [0mSELECT * FROM "articles" [0m
+Completed in 8ms (View: 1, DB: 1) | 200 OK [http://localhost/articles.js?callback=CPJSONPConnectionCallbacks.callback3466]
+
+
+Processing CappsController#index (for 127.0.0.1 at 2009-04-26 22:44:58) [GET]
+  [4;36;1mCapp Load (0.4ms)[0m   [0;1mSELECT * FROM "capps" [0m
+Rendering template within layouts/capps
+Rendering capps/index
+Completed in 6ms (View: 1, DB: 0) | 200 OK [http://localhost/capps]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-26 22:44:58) [GET]
+
+ActionController::RoutingError (No route matches "/Frameworks/AppKit/AppKit.j" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-26 22:44:58) [GET]
+
+ActionController::RoutingError (No route matches "/Frameworks/Foundation/Foundation.j" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ArticlesController#index to js (for 127.0.0.1 at 2009-04-26 22:45:02) [GET]
+  Parameters: {"callback"=>"CPJSONPConnectionCallbacks.callback3352"}
+  [4;35;1mArticle Load (1.4ms)[0m   [0mSELECT * FROM "articles" [0m
+Completed in 10ms (View: 1, DB: 1) | 200 OK [http://localhost/articles.js?callback=CPJSONPConnectionCallbacks.callback3352]
+
+
+Processing CappsController#index (for 127.0.0.1 at 2009-04-26 22:46:09) [GET]
+  [4;36;1mCapp Load (0.4ms)[0m   [0;1mSELECT * FROM "capps" [0m
+Rendering template within layouts/capps
+Rendering capps/index
+Completed in 7ms (View: 1, DB: 0) | 200 OK [http://localhost/capps]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-26 22:46:09) [GET]
+
+ActionController::RoutingError (No route matches "/Frameworks/AppKit/AppKit.j" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-26 22:46:09) [GET]
+
+ActionController::RoutingError (No route matches "/Frameworks/Foundation/Foundation.j" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ArticlesController#index to js (for 127.0.0.1 at 2009-04-26 22:46:13) [GET]
+  Parameters: {"callback"=>"CPJSONPConnectionCallbacks.callback3365"}
+  [4;35;1mArticle Load (0.6ms)[0m   [0mSELECT * FROM "articles" [0m
+Completed in 8ms (View: 1, DB: 1) | 200 OK [http://localhost/articles.js?callback=CPJSONPConnectionCallbacks.callback3365]
+
+
+Processing CappsController#index (for 127.0.0.1 at 2009-04-26 22:46:41) [GET]
+  [4;36;1mCapp Load (0.4ms)[0m   [0;1mSELECT * FROM "capps" [0m
+Rendering template within layouts/capps
+Rendering capps/index
+Completed in 5ms (View: 1, DB: 0) | 200 OK [http://localhost/capps]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-26 22:46:41) [GET]
+
+ActionController::RoutingError (No route matches "/Frameworks/AppKit/AppKit.j" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-26 22:46:41) [GET]
+
+ActionController::RoutingError (No route matches "/Frameworks/Foundation/Foundation.j" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ArticlesController#index to js (for 127.0.0.1 at 2009-04-26 22:46:47) [GET]
+  Parameters: {"callback"=>"CPJSONPConnectionCallbacks.callback3396"}
+  [4;35;1mArticle Load (0.7ms)[0m   [0mSELECT * FROM "articles" [0m
+Completed in 8ms (View: 1, DB: 1) | 200 OK [http://localhost/articles.js?callback=CPJSONPConnectionCallbacks.callback3396]
+
+
+Processing ArticlesController#index to js (for 127.0.0.1 at 2009-04-26 22:47:12) [GET]
+  Parameters: {"callback"=>"CPJSONPConnectionCallbacks.callback3531"}
+  [4;36;1mArticle Load (0.6ms)[0m   [0;1mSELECT * FROM "articles" [0m
+Completed in 8ms (View: 1, DB: 1) | 200 OK [http://localhost/articles.js?callback=CPJSONPConnectionCallbacks.callback3531]
+
+
+Processing CappsController#index (for 127.0.0.1 at 2009-04-26 22:47:17) [GET]
+  [4;35;1mCapp Load (0.7ms)[0m   [0mSELECT * FROM "capps" [0m
+Rendering template within layouts/capps
+Rendering capps/index
+Completed in 8ms (View: 1, DB: 1) | 200 OK [http://localhost/capps]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-26 22:47:18) [GET]
+
+ActionController::RoutingError (No route matches "/Frameworks/AppKit/AppKit.j" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-26 22:47:18) [GET]
+
+ActionController::RoutingError (No route matches "/Frameworks/Foundation/Foundation.j" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ArticlesController#index to js (for 127.0.0.1 at 2009-04-26 22:47:24) [GET]
+  Parameters: {"callback"=>"CPJSONPConnectionCallbacks.callback3361"}
+  [4;36;1mArticle Load (0.6ms)[0m   [0;1mSELECT * FROM "articles" [0m
+Completed in 9ms (View: 1, DB: 1) | 200 OK [http://localhost/articles.js?callback=CPJSONPConnectionCallbacks.callback3361]
+
+
+Processing CappsController#index (for 127.0.0.1 at 2009-04-26 22:48:07) [GET]
+  [4;35;1mCapp Load (0.4ms)[0m   [0mSELECT * FROM "capps" [0m
+Rendering template within layouts/capps
+Rendering capps/index
+Completed in 5ms (View: 1, DB: 0) | 200 OK [http://localhost/capps]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-26 22:48:07) [GET]
+
+ActionController::RoutingError (No route matches "/Frameworks/AppKit/AppKit.j" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-26 22:48:07) [GET]
+
+ActionController::RoutingError (No route matches "/Frameworks/Foundation/Foundation.j" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ArticlesController#index to js (for 127.0.0.1 at 2009-04-26 22:48:11) [GET]
+  Parameters: {"callback"=>"CPJSONPConnectionCallbacks.callback3363"}
+  [4;36;1mArticle Load (0.6ms)[0m   [0;1mSELECT * FROM "articles" [0m
+Completed in 8ms (View: 1, DB: 1) | 200 OK [http://localhost/articles.js?callback=CPJSONPConnectionCallbacks.callback3363]
+
+
+Processing CappsController#index (for 127.0.0.1 at 2009-04-26 22:56:20) [GET]
+  [4;35;1mCapp Load (0.4ms)[0m   [0mSELECT * FROM "capps" [0m
+Rendering template within layouts/capps
+Rendering capps/index
+Completed in 6ms (View: 1, DB: 0) | 200 OK [http://localhost/capps]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-26 22:56:20) [GET]
+
+ActionController::RoutingError (No route matches "/Frameworks/AppKit/AppKit.j" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-26 22:56:20) [GET]
+
+ActionController::RoutingError (No route matches "/Frameworks/Foundation/Foundation.j" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing CappsController#index (for 127.0.0.1 at 2009-04-26 22:57:01) [GET]
+  [4;36;1mCapp Load (0.3ms)[0m   [0;1mSELECT * FROM "capps" [0m
+Rendering template within layouts/capps
+Rendering capps/index
+Completed in 5ms (View: 1, DB: 0) | 200 OK [http://localhost/capps]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-26 22:57:02) [GET]
+
+ActionController::RoutingError (No route matches "/Frameworks/AppKit/AppKit.j" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-26 22:57:02) [GET]
+
+ActionController::RoutingError (No route matches "/Frameworks/Foundation/Foundation.j" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing CappsController#index (for 127.0.0.1 at 2009-04-26 22:57:35) [GET]
+  [4;35;1mCapp Load (0.4ms)[0m   [0mSELECT * FROM "capps" [0m
+Rendering template within layouts/capps
+Rendering capps/index
+Completed in 5ms (View: 1, DB: 0) | 200 OK [http://localhost/capps]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-26 22:57:35) [GET]
+
+ActionController::RoutingError (No route matches "/Frameworks/AppKit/AppKit.j" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-26 22:57:35) [GET]
+
+ActionController::RoutingError (No route matches "/Frameworks/Foundation/Foundation.j" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing CappsController#index (for 127.0.0.1 at 2009-04-26 23:00:33) [GET]
+  [4;36;1mCapp Load (0.3ms)[0m   [0;1mSELECT * FROM "capps" [0m
+Rendering template within layouts/capps
+Rendering capps/index
+Completed in 5ms (View: 1, DB: 0) | 200 OK [http://localhost/capps]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-26 23:00:33) [GET]
+
+ActionController::RoutingError (No route matches "/Frameworks/AppKit/AppKit.j" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-26 23:00:33) [GET]
+
+ActionController::RoutingError (No route matches "/Frameworks/Foundation/Foundation.j" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing CappsController#index (for 127.0.0.1 at 2009-04-26 23:01:00) [GET]
+  [4;35;1mCapp Load (0.4ms)[0m   [0mSELECT * FROM "capps" [0m
+Rendering template within layouts/capps
+Rendering capps/index
+Completed in 7ms (View: 1, DB: 0) | 200 OK [http://localhost/capps]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-26 23:01:00) [GET]
+
+ActionController::RoutingError (No route matches "/Frameworks/AppKit/AppKit.j" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-26 23:01:00) [GET]
+
+ActionController::RoutingError (No route matches "/Frameworks/Foundation/Foundation.j" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ArticlesController#index to js (for 127.0.0.1 at 2009-04-26 23:01:05) [GET]
+  Parameters: {"callback"=>"CPJSONPConnectionCallbacks.callback3367"}
+  [4;36;1mArticle Load (0.6ms)[0m   [0;1mSELECT * FROM "articles" [0m
+Completed in 8ms (View: 1, DB: 1) | 200 OK [http://localhost/articles.js?callback=CPJSONPConnectionCallbacks.callback3367]
+
+
+Processing CappsController#index (for 127.0.0.1 at 2009-04-26 23:01:40) [GET]
+  [4;35;1mCapp Load (0.4ms)[0m   [0mSELECT * FROM "capps" [0m
+Rendering template within layouts/capps
+Rendering capps/index
+Completed in 6ms (View: 1, DB: 0) | 200 OK [http://localhost/capps]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-26 23:01:40) [GET]
+
+ActionController::RoutingError (No route matches "/Frameworks/AppKit/AppKit.j" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-26 23:01:40) [GET]
+
+ActionController::RoutingError (No route matches "/Frameworks/Foundation/Foundation.j" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing CappsController#index (for 127.0.0.1 at 2009-04-26 23:06:56) [GET]
+  [4;36;1mCapp Load (0.4ms)[0m   [0;1mSELECT * FROM "capps" [0m
+Rendering template within layouts/capps
+Rendering capps/index
+Completed in 7ms (View: 1, DB: 0) | 200 OK [http://localhost/capps]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-26 23:06:57) [GET]
+
+ActionController::RoutingError (No route matches "/Frameworks/AppKit/AppKit.j" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-26 23:06:57) [GET]
+
+ActionController::RoutingError (No route matches "/Frameworks/Foundation/Foundation.j" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing CappsController#index (for 127.0.0.1 at 2009-04-26 23:08:19) [GET]
+  [4;35;1mCapp Load (0.6ms)[0m   [0mSELECT * FROM "capps" [0m
+Rendering template within layouts/capps
+Rendering capps/index
+Completed in 7ms (View: 1, DB: 1) | 200 OK [http://localhost/capps]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-26 23:08:20) [GET]
+
+ActionController::RoutingError (No route matches "/Frameworks/AppKit/AppKit.j" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-26 23:08:20) [GET]
+
+ActionController::RoutingError (No route matches "/Frameworks/Foundation/Foundation.j" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing CappsController#index (for 127.0.0.1 at 2009-04-26 23:08:50) [GET]
+  [4;36;1mCapp Load (0.5ms)[0m   [0;1mSELECT * FROM "capps" [0m
+Rendering template within layouts/capps
+Rendering capps/index
+Completed in 7ms (View: 1, DB: 0) | 200 OK [http://localhost/capps]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-26 23:08:50) [GET]
+
+ActionController::RoutingError (No route matches "/Frameworks/AppKit/AppKit.j" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-26 23:08:50) [GET]
+
+ActionController::RoutingError (No route matches "/Frameworks/Foundation/Foundation.j" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing CappsController#index (for 127.0.0.1 at 2009-04-26 23:09:32) [GET]
+  [4;35;1mCapp Load (2.4ms)[0m   [0mSELECT * FROM "capps" [0m
+Rendering template within layouts/capps
+Rendering capps/index
+Completed in 8ms (View: 1, DB: 2) | 200 OK [http://localhost/capps]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-26 23:09:32) [GET]
+
+ActionController::RoutingError (No route matches "/Frameworks/AppKit/AppKit.j" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-26 23:09:32) [GET]
+
+ActionController::RoutingError (No route matches "/Frameworks/Foundation/Foundation.j" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing CappsController#index (for 127.0.0.1 at 2009-04-26 23:09:44) [GET]
+  [4;36;1mCapp Load (0.6ms)[0m   [0;1mSELECT * FROM "capps" [0m
+Rendering template within layouts/capps
+Rendering capps/index
+Completed in 8ms (View: 1, DB: 1) | 200 OK [http://localhost/capps]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-26 23:09:44) [GET]
+
+ActionController::RoutingError (No route matches "/Frameworks/AppKit/AppKit.j" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-26 23:09:44) [GET]
+
+ActionController::RoutingError (No route matches "/Frameworks/Foundation/Foundation.j" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing CappsController#index (for 127.0.0.1 at 2009-04-26 23:10:12) [GET]
+  [4;35;1mCapp Load (0.4ms)[0m   [0mSELECT * FROM "capps" [0m
+Rendering template within layouts/capps
+Rendering capps/index
+Completed in 8ms (View: 1, DB: 0) | 200 OK [http://localhost/capps]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-26 23:10:12) [GET]
+
+ActionController::RoutingError (No route matches "/Frameworks/AppKit/AppKit.j" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-26 23:10:12) [GET]
+
+ActionController::RoutingError (No route matches "/Frameworks/Foundation/Foundation.j" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing CappsController#index (for 127.0.0.1 at 2009-04-26 23:10:27) [GET]
+  [4;36;1mCapp Load (0.4ms)[0m   [0;1mSELECT * FROM "capps" [0m
+Rendering template within layouts/capps
+Rendering capps/index
+Completed in 6ms (View: 1, DB: 0) | 200 OK [http://localhost/capps]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-26 23:10:27) [GET]
+
+ActionController::RoutingError (No route matches "/Frameworks/AppKit/AppKit.j" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-26 23:10:27) [GET]
+
+ActionController::RoutingError (No route matches "/Frameworks/Foundation/Foundation.j" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing CappsController#index (for 127.0.0.1 at 2009-04-26 23:10:44) [GET]
+  [4;35;1mCapp Load (0.4ms)[0m   [0mSELECT * FROM "capps" [0m
+Rendering template within layouts/capps
+Rendering capps/index
+Completed in 6ms (View: 1, DB: 0) | 200 OK [http://localhost/capps]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-26 23:10:45) [GET]
+
+ActionController::RoutingError (No route matches "/Frameworks/AppKit/AppKit.j" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-26 23:10:45) [GET]
+
+ActionController::RoutingError (No route matches "/Frameworks/Foundation/Foundation.j" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing CappsController#index (for 127.0.0.1 at 2009-04-26 23:11:13) [GET]
+  [4;36;1mCapp Load (0.5ms)[0m   [0;1mSELECT * FROM "capps" [0m
+Rendering template within layouts/capps
+Rendering capps/index
+Completed in 6ms (View: 1, DB: 1) | 200 OK [http://localhost/capps]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-26 23:11:13) [GET]
+
+ActionController::RoutingError (No route matches "/Frameworks/AppKit/AppKit.j" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-26 23:11:13) [GET]
+
+ActionController::RoutingError (No route matches "/Frameworks/Foundation/Foundation.j" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing CappsController#index (for 127.0.0.1 at 2009-04-26 23:14:46) [GET]
+  [4;35;1mCapp Load (0.4ms)[0m   [0mSELECT * FROM "capps" [0m
+Rendering template within layouts/capps
+Rendering capps/index
+Completed in 5ms (View: 1, DB: 0) | 200 OK [http://localhost/capps]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-26 23:14:47) [GET]
+
+ActionController::RoutingError (No route matches "/Frameworks/AppKit/AppKit.j" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-26 23:14:47) [GET]
+
+ActionController::RoutingError (No route matches "/Frameworks/Foundation/Foundation.j" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing CappsController#index (for 127.0.0.1 at 2009-04-26 23:14:55) [GET]
+  [4;36;1mCapp Load (0.3ms)[0m   [0;1mSELECT * FROM "capps" [0m
+Rendering template within layouts/capps
+Rendering capps/index
+Completed in 6ms (View: 1, DB: 0) | 200 OK [http://localhost/capps]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-26 23:14:55) [GET]
+
+ActionController::RoutingError (No route matches "/Frameworks/AppKit/AppKit.j" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-26 23:14:55) [GET]
+
+ActionController::RoutingError (No route matches "/Frameworks/Foundation/Foundation.j" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing CappsController#index (for 127.0.0.1 at 2009-04-26 23:15:01) [GET]
+  [4;35;1mCapp Load (0.4ms)[0m   [0mSELECT * FROM "capps" [0m
+Rendering template within layouts/capps
+Rendering capps/index
+Completed in 6ms (View: 1, DB: 0) | 200 OK [http://localhost/capps]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-26 23:15:02) [GET]
+
+ActionController::RoutingError (No route matches "/Frameworks/AppKit/AppKit.j" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-26 23:15:02) [GET]
+
+ActionController::RoutingError (No route matches "/Frameworks/Foundation/Foundation.j" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing CappsController#index (for 127.0.0.1 at 2009-04-26 23:16:33) [GET]
+  [4;36;1mCapp Load (0.5ms)[0m   [0;1mSELECT * FROM "capps" [0m
+Rendering template within layouts/capps
+Rendering capps/index
+Completed in 6ms (View: 1, DB: 0) | 200 OK [http://localhost/capps]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-26 23:16:33) [GET]
+
+ActionController::RoutingError (No route matches "/Frameworks/AppKit/AppKit.j" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-26 23:16:33) [GET]
+
+ActionController::RoutingError (No route matches "/Frameworks/Foundation/Foundation.j" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing CappsController#index (for 127.0.0.1 at 2009-04-26 23:16:42) [GET]
+  [4;35;1mCapp Load (0.4ms)[0m   [0mSELECT * FROM "capps" [0m
+Rendering template within layouts/capps
+Rendering capps/index
+Completed in 6ms (View: 1, DB: 0) | 200 OK [http://localhost/capps]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-26 23:16:43) [GET]
+
+ActionController::RoutingError (No route matches "/Frameworks/AppKit/AppKit.j" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-26 23:16:43) [GET]
+
+ActionController::RoutingError (No route matches "/Frameworks/Foundation/Foundation.j" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing CappsController#index (for 127.0.0.1 at 2009-04-26 23:17:01) [GET]
+  [4;36;1mCapp Load (0.4ms)[0m   [0;1mSELECT * FROM "capps" [0m
+Rendering template within layouts/capps
+Rendering capps/index
+Completed in 5ms (View: 1, DB: 0) | 200 OK [http://localhost/capps]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-26 23:17:01) [GET]
+
+ActionController::RoutingError (No route matches "/Frameworks/AppKit/AppKit.j" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-26 23:17:01) [GET]
+
+ActionController::RoutingError (No route matches "/Frameworks/Foundation/Foundation.j" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing CappsController#index (for 127.0.0.1 at 2009-04-26 23:17:50) [GET]
+  [4;35;1mCapp Load (1.1ms)[0m   [0mSELECT * FROM "capps" [0m
+Rendering template within layouts/capps
+Rendering capps/index
+Completed in 7ms (View: 1, DB: 1) | 200 OK [http://localhost/capps]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-26 23:17:50) [GET]
+
+ActionController::RoutingError (No route matches "/Frameworks/AppKit/AppKit.j" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-26 23:17:50) [GET]
+
+ActionController::RoutingError (No route matches "/Frameworks/Foundation/Foundation.j" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ArticlesController#index to js (for 127.0.0.1 at 2009-04-26 23:17:54) [GET]
+  Parameters: {"callback"=>"CPJSONPConnectionCallbacks.callback3666"}
+  [4;36;1mArticle Load (0.6ms)[0m   [0;1mSELECT * FROM "articles" [0m
+Completed in 8ms (View: 1, DB: 1) | 200 OK [http://localhost/articles.js?callback=CPJSONPConnectionCallbacks.callback3666]
+
+
+Processing CappsController#index (for 127.0.0.1 at 2009-04-26 23:18:25) [GET]
+  [4;35;1mCapp Load (0.5ms)[0m   [0mSELECT * FROM "capps" [0m
+Rendering template within layouts/capps
+Rendering capps/index
+Completed in 6ms (View: 1, DB: 0) | 200 OK [http://localhost/capps]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-26 23:18:25) [GET]
+
+ActionController::RoutingError (No route matches "/Frameworks/AppKit/AppKit.j" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-26 23:18:25) [GET]
+
+ActionController::RoutingError (No route matches "/Frameworks/Foundation/Foundation.j" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-26 23:18:27) [GET]
+
+ActionController::RoutingError (No route matches "/Resources/Cappuccino.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-26 23:18:27) [GET]
+
+ActionController::RoutingError (No route matches "/Resources/CappuccinoAlternate.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing CappsController#index (for 127.0.0.1 at 2009-04-26 23:20:15) [GET]
+  [4;36;1mCapp Load (0.5ms)[0m   [0;1mSELECT * FROM "capps" [0m
+Rendering template within layouts/capps
+Rendering capps/index
+Completed in 7ms (View: 1, DB: 0) | 200 OK [http://localhost/capps]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-26 23:20:15) [GET]
+
+ActionController::RoutingError (No route matches "/Frameworks/AppKit/AppKit.j" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-26 23:20:15) [GET]
+
+ActionController::RoutingError (No route matches "/Frameworks/Foundation/Foundation.j" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing CappsController#index (for 127.0.0.1 at 2009-04-26 23:21:38) [GET]
+  [4;35;1mCapp Load (0.5ms)[0m   [0mSELECT * FROM "capps" [0m
+Rendering template within layouts/capps
+Rendering capps/index
+Completed in 7ms (View: 1, DB: 1) | 200 OK [http://localhost/capps]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-26 23:21:38) [GET]
+
+ActionController::RoutingError (No route matches "/Frameworks/AppKit/AppKit.j" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-26 23:21:38) [GET]
+
+ActionController::RoutingError (No route matches "/Frameworks/Foundation/Foundation.j" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing CappsController#index (for 127.0.0.1 at 2009-04-26 23:22:06) [GET]
+  [4;36;1mCapp Load (0.4ms)[0m   [0;1mSELECT * FROM "capps" [0m
+Rendering template within layouts/capps
+Rendering capps/index
+Completed in 5ms (View: 1, DB: 0) | 200 OK [http://localhost/capps]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-26 23:22:06) [GET]
+
+ActionController::RoutingError (No route matches "/Frameworks/AppKit/AppKit.j" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-26 23:22:06) [GET]
+
+ActionController::RoutingError (No route matches "/Frameworks/Foundation/Foundation.j" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing CappsController#index (for 127.0.0.1 at 2009-04-26 23:23:01) [GET]
+  [4;35;1mCapp Load (0.4ms)[0m   [0mSELECT * FROM "capps" [0m
+Rendering template within layouts/capps
+Rendering capps/index
+Completed in 6ms (View: 1, DB: 0) | 200 OK [http://localhost/capps]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-26 23:23:01) [GET]
+
+ActionController::RoutingError (No route matches "/Frameworks/AppKit/AppKit.j" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-26 23:23:01) [GET]
+
+ActionController::RoutingError (No route matches "/Frameworks/Foundation/Foundation.j" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing CappsController#index (for 127.0.0.1 at 2009-04-26 23:31:36) [GET]
+  [4;36;1mCapp Load (0.4ms)[0m   [0;1mSELECT * FROM "capps" [0m
+Rendering template within layouts/capps
+Rendering capps/index
+Completed in 47ms (View: 1, DB: 0) | 200 OK [http://localhost/capps]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-26 23:31:36) [GET]
+
+ActionController::RoutingError (No route matches "/Frameworks/AppKit/AppKit.j" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-26 23:31:36) [GET]
+
+ActionController::RoutingError (No route matches "/Frameworks/Foundation/Foundation.j" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing CappsController#index (for 127.0.0.1 at 2009-04-26 23:32:22) [GET]
+  [4;35;1mCapp Load (0.4ms)[0m   [0mSELECT * FROM "capps" [0m
+Rendering template within layouts/capps
+Rendering capps/index
+Completed in 51ms (View: 1, DB: 0) | 200 OK [http://localhost/capps]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-26 23:32:22) [GET]
+
+ActionController::RoutingError (No route matches "/Frameworks/AppKit/AppKit.j" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-26 23:32:22) [GET]
+
+ActionController::RoutingError (No route matches "/Frameworks/Foundation/Foundation.j" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing CappsController#index (for 127.0.0.1 at 2009-04-26 23:33:04) [GET]
+  [4;36;1mCapp Load (0.4ms)[0m   [0;1mSELECT * FROM "capps" [0m
+Rendering template within layouts/capps
+Rendering capps/index
+Completed in 6ms (View: 2, DB: 0) | 200 OK [http://localhost/capps]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-26 23:33:04) [GET]
+
+ActionController::RoutingError (No route matches "/Frameworks/AppKit/AppKit.j" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-26 23:33:04) [GET]
+
+ActionController::RoutingError (No route matches "/Frameworks/Foundation/Foundation.j" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing CappsController#index (for 127.0.0.1 at 2009-04-26 23:35:01) [GET]
+  [4;35;1mCapp Load (0.4ms)[0m   [0mSELECT * FROM "capps" [0m
+Rendering template within layouts/capps
+Rendering capps/index
+Completed in 6ms (View: 1, DB: 0) | 200 OK [http://localhost/capps]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-26 23:35:01) [GET]
+
+ActionController::RoutingError (No route matches "/Frameworks/AppKit/AppKit.j" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-26 23:35:01) [GET]
+
+ActionController::RoutingError (No route matches "/Frameworks/Foundation/Foundation.j" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing CappsController#index (for 127.0.0.1 at 2009-04-26 23:35:53) [GET]
+  [4;36;1mCapp Load (0.4ms)[0m   [0;1mSELECT * FROM "capps" [0m
+Rendering template within layouts/capps
+Rendering capps/index
+Completed in 6ms (View: 1, DB: 0) | 200 OK [http://localhost/capps]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-26 23:35:53) [GET]
+
+ActionController::RoutingError (No route matches "/Frameworks/AppKit/AppKit.j" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-26 23:35:53) [GET]
+
+ActionController::RoutingError (No route matches "/Frameworks/Foundation/Foundation.j" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing CappsController#index (for 127.0.0.1 at 2009-04-26 23:36:32) [GET]
+  [4;35;1mCapp Load (0.5ms)[0m   [0mSELECT * FROM "capps" [0m
+Rendering template within layouts/capps
+Rendering capps/index
+Completed in 7ms (View: 1, DB: 0) | 200 OK [http://localhost/capps]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-26 23:36:32) [GET]
+
+ActionController::RoutingError (No route matches "/Frameworks/AppKit/AppKit.j" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-26 23:36:32) [GET]
+
+ActionController::RoutingError (No route matches "/Frameworks/Foundation/Foundation.j" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing CappsController#index (for 127.0.0.1 at 2009-04-26 23:37:26) [GET]
+  [4;36;1mCapp Load (0.4ms)[0m   [0;1mSELECT * FROM "capps" [0m
+Rendering template within layouts/capps
+Rendering capps/index
+Completed in 6ms (View: 1, DB: 0) | 200 OK [http://localhost/capps]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-26 23:37:27) [GET]
+
+ActionController::RoutingError (No route matches "/Frameworks/AppKit/AppKit.j" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-26 23:37:27) [GET]
+
+ActionController::RoutingError (No route matches "/Frameworks/Foundation/Foundation.j" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing CappsController#index (for 127.0.0.1 at 2009-04-26 23:38:25) [GET]
+  [4;35;1mCapp Load (0.4ms)[0m   [0mSELECT * FROM "capps" [0m
+Rendering template within layouts/capps
+Rendering capps/index
+Completed in 5ms (View: 1, DB: 0) | 200 OK [http://localhost/capps]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-26 23:38:25) [GET]
+
+ActionController::RoutingError (No route matches "/Frameworks/AppKit/AppKit.j" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-26 23:38:25) [GET]
+
+ActionController::RoutingError (No route matches "/Frameworks/Foundation/Foundation.j" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing CappsController#index (for 127.0.0.1 at 2009-04-26 23:39:09) [GET]
+  [4;36;1mCapp Load (0.4ms)[0m   [0;1mSELECT * FROM "capps" [0m
+Rendering template within layouts/capps
+Rendering capps/index
+Completed in 6ms (View: 1, DB: 0) | 200 OK [http://localhost/capps]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-26 23:39:10) [GET]
+
+ActionController::RoutingError (No route matches "/Frameworks/AppKit/AppKit.j" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-26 23:39:10) [GET]
+
+ActionController::RoutingError (No route matches "/Frameworks/Foundation/Foundation.j" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing CappsController#index (for 127.0.0.1 at 2009-04-26 23:40:57) [GET]
+  [4;35;1mCapp Load (0.5ms)[0m   [0mSELECT * FROM "capps" [0m
+Rendering template within layouts/capps
+Rendering capps/index
+Completed in 8ms (View: 2, DB: 1) | 200 OK [http://localhost/capps]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-26 23:40:58) [GET]
+
+ActionController::RoutingError (No route matches "/Frameworks/AppKit/AppKit.j" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-26 23:40:58) [GET]
+
+ActionController::RoutingError (No route matches "/Frameworks/Foundation/Foundation.j" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing CappsController#index (for 127.0.0.1 at 2009-04-26 23:41:32) [GET]
+  [4;36;1mCapp Load (1.1ms)[0m   [0;1mSELECT * FROM "capps" [0m
+Rendering template within layouts/capps
+Rendering capps/index
+Completed in 8ms (View: 1, DB: 1) | 200 OK [http://localhost/capps]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-26 23:41:32) [GET]
+
+ActionController::RoutingError (No route matches "/Frameworks/AppKit/AppKit.j" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-26 23:41:32) [GET]
+
+ActionController::RoutingError (No route matches "/Frameworks/Foundation/Foundation.j" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing CappsController#index (for 127.0.0.1 at 2009-04-26 23:42:01) [GET]
+  [4;35;1mCapp Load (13.8ms)[0m   [0mSELECT * FROM "capps" [0m
+Rendering template within layouts/capps
+Rendering capps/index
+Completed in 21ms (View: 2, DB: 14) | 200 OK [http://localhost/capps]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-26 23:42:01) [GET]
+
+ActionController::RoutingError (No route matches "/Frameworks/AppKit/AppKit.j" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-26 23:42:01) [GET]
+
+ActionController::RoutingError (No route matches "/Frameworks/Foundation/Foundation.j" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing CappsController#index (for 127.0.0.1 at 2009-04-26 23:42:33) [GET]
+  [4;36;1mCapp Load (15.8ms)[0m   [0;1mSELECT * FROM "capps" [0m
+Rendering template within layouts/capps
+Rendering capps/index
+Completed in 23ms (View: 1, DB: 16) | 200 OK [http://localhost/capps]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-26 23:42:33) [GET]
+
+ActionController::RoutingError (No route matches "/Frameworks/AppKit/AppKit.j" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-26 23:42:33) [GET]
+
+ActionController::RoutingError (No route matches "/Frameworks/Foundation/Foundation.j" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing CappsController#index (for 127.0.0.1 at 2009-04-26 23:43:05) [GET]
+  [4;35;1mCapp Load (0.4ms)[0m   [0mSELECT * FROM "capps" [0m
+Rendering template within layouts/capps
+Rendering capps/index
+Completed in 6ms (View: 1, DB: 0) | 200 OK [http://localhost/capps]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-26 23:43:05) [GET]
+
+ActionController::RoutingError (No route matches "/Frameworks/AppKit/AppKit.j" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-26 23:43:05) [GET]
+
+ActionController::RoutingError (No route matches "/Frameworks/Foundation/Foundation.j" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing CappsController#index (for 127.0.0.1 at 2009-04-26 23:43:18) [GET]
+  [4;36;1mCapp Load (0.4ms)[0m   [0;1mSELECT * FROM "capps" [0m
+Rendering template within layouts/capps
+Rendering capps/index
+Completed in 5ms (View: 1, DB: 0) | 200 OK [http://localhost/capps]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-26 23:43:18) [GET]
+
+ActionController::RoutingError (No route matches "/Frameworks/AppKit/AppKit.j" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-26 23:43:18) [GET]
+
+ActionController::RoutingError (No route matches "/Frameworks/Foundation/Foundation.j" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing CappsController#index (for 127.0.0.1 at 2009-04-26 23:46:02) [GET]
+  [4;35;1mCapp Load (15.1ms)[0m   [0mSELECT * FROM "capps" [0m
+Rendering template within layouts/capps
+Rendering capps/index
+Completed in 21ms (View: 2, DB: 15) | 200 OK [http://localhost/capps]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-26 23:46:02) [GET]
+
+ActionController::RoutingError (No route matches "/Frameworks/AppKit/AppKit.j" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-26 23:46:02) [GET]
+
+ActionController::RoutingError (No route matches "/Frameworks/Foundation/Foundation.j" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing CappsController#index (for 127.0.0.1 at 2009-04-26 23:46:16) [GET]
+  [4;36;1mCapp Load (11.2ms)[0m   [0;1mSELECT * FROM "capps" [0m
+Rendering template within layouts/capps
+Rendering capps/index
+Completed in 18ms (View: 1, DB: 11) | 200 OK [http://localhost/capps]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-26 23:46:16) [GET]
+
+ActionController::RoutingError (No route matches "/Frameworks/AppKit/AppKit.j" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-26 23:46:16) [GET]
+
+ActionController::RoutingError (No route matches "/Frameworks/Foundation/Foundation.j" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing CappsController#index (for 127.0.0.1 at 2009-04-26 23:47:34) [GET]
+  [4;35;1mCapp Load (15.2ms)[0m   [0mSELECT * FROM "capps" [0m
+Rendering template within layouts/capps
+Rendering capps/index
+Completed in 22ms (View: 2, DB: 15) | 200 OK [http://localhost/capps]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-26 23:47:34) [GET]
+
+ActionController::RoutingError (No route matches "/Frameworks/AppKit/AppKit.j" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-26 23:47:34) [GET]
+
+ActionController::RoutingError (No route matches "/Frameworks/Foundation/Foundation.j" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ArticlesController#index to js (for 127.0.0.1 at 2009-04-26 23:47:43) [GET]
+  Parameters: {"callback"=>"CPJSONPConnectionCallbacks.callback4821"}
+  [4;36;1mArticle Load (14.3ms)[0m   [0;1mSELECT * FROM "articles" [0m
+Completed in 46ms (View: 1, DB: 14) | 200 OK [http://localhost/articles.js?callback=CPJSONPConnectionCallbacks.callback4821]
+
+
+Processing CappsController#index (for 127.0.0.1 at 2009-04-26 23:49:34) [GET]
+  [4;35;1mCapp Load (16.9ms)[0m   [0mSELECT * FROM "capps" [0m
+Rendering template within layouts/capps
+Rendering capps/index
+Completed in 24ms (View: 1, DB: 17) | 200 OK [http://localhost/capps]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-26 23:49:35) [GET]
+
+ActionController::RoutingError (No route matches "/Frameworks/AppKit/AppKit.j" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-26 23:49:35) [GET]
+
+ActionController::RoutingError (No route matches "/Frameworks/Foundation/Foundation.j" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ArticlesController#index to js (for 127.0.0.1 at 2009-04-26 23:49:41) [GET]
+  Parameters: {"callback"=>"CPJSONPConnectionCallbacks.callback4569"}
+  [4;36;1mArticle Load (0.7ms)[0m   [0;1mSELECT * FROM "articles" [0m
+Completed in 8ms (View: 1, DB: 1) | 200 OK [http://localhost/articles.js?callback=CPJSONPConnectionCallbacks.callback4569]
+
+
+Processing CappsController#index (for 127.0.0.1 at 2009-04-26 23:50:19) [GET]
+  [4;35;1mCapp Load (21.4ms)[0m   [0mSELECT * FROM "capps" [0m
+Rendering template within layouts/capps
+Rendering capps/index
+Completed in 31ms (View: 2, DB: 21) | 200 OK [http://localhost/capps]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-26 23:50:20) [GET]
+
+ActionController::RoutingError (No route matches "/Frameworks/AppKit/AppKit.j" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-26 23:50:20) [GET]
+
+ActionController::RoutingError (No route matches "/Frameworks/Foundation/Foundation.j" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ArticlesController#index to js (for 127.0.0.1 at 2009-04-26 23:50:26) [GET]
+  Parameters: {"callback"=>"CPJSONPConnectionCallbacks.callback4594"}
+  [4;36;1mArticle Load (0.6ms)[0m   [0;1mSELECT * FROM "articles" [0m
+Completed in 51ms (View: 1, DB: 1) | 200 OK [http://localhost/articles.js?callback=CPJSONPConnectionCallbacks.callback4594]
+
+
+Processing CappsController#index (for 127.0.0.1 at 2009-04-26 23:51:39) [GET]
+  [4;35;1mCapp Load (18.5ms)[0m   [0mSELECT * FROM "capps" [0m
+Rendering template within layouts/capps
+Rendering capps/index
+Completed in 25ms (View: 2, DB: 18) | 200 OK [http://localhost/capps]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-26 23:51:40) [GET]
+
+ActionController::RoutingError (No route matches "/Frameworks/AppKit/AppKit.j" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-26 23:51:40) [GET]
+
+ActionController::RoutingError (No route matches "/Frameworks/Foundation/Foundation.j" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ArticlesController#index to js (for 127.0.0.1 at 2009-04-26 23:51:47) [GET]
+  Parameters: {"callback"=>"CPJSONPConnectionCallbacks.callback4449"}
+  [4;36;1mArticle Load (0.8ms)[0m   [0;1mSELECT * FROM "articles" [0m
+Completed in 9ms (View: 1, DB: 1) | 200 OK [http://localhost/articles.js?callback=CPJSONPConnectionCallbacks.callback4449]
+
+
+Processing CappsController#index (for 127.0.0.1 at 2009-04-26 23:52:17) [GET]
+  [4;35;1mCapp Load (0.4ms)[0m   [0mSELECT * FROM "capps" [0m
+Rendering template within layouts/capps
+Rendering capps/index
+Completed in 8ms (View: 1, DB: 0) | 200 OK [http://localhost/capps]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-26 23:52:18) [GET]
+
+ActionController::RoutingError (No route matches "/Frameworks/AppKit/AppKit.j" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-26 23:52:18) [GET]
+
+ActionController::RoutingError (No route matches "/Frameworks/Foundation/Foundation.j" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ArticlesController#index to js (for 127.0.0.1 at 2009-04-26 23:52:23) [GET]
+  Parameters: {"callback"=>"CPJSONPConnectionCallbacks.callback4583"}
+  [4;36;1mArticle Load (0.8ms)[0m   [0;1mSELECT * FROM "articles" [0m
+Completed in 8ms (View: 1, DB: 1) | 200 OK [http://localhost/articles.js?callback=CPJSONPConnectionCallbacks.callback4583]
+
+
+Processing CappsController#index (for 127.0.0.1 at 2009-04-26 23:52:37) [GET]
+  [4;35;1mCapp Load (23.6ms)[0m   [0mSELECT * FROM "capps" [0m
+Rendering template within layouts/capps
+Rendering capps/index
+Completed in 29ms (View: 1, DB: 24) | 200 OK [http://localhost/capps]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-26 23:52:37) [GET]
+
+ActionController::RoutingError (No route matches "/Frameworks/AppKit/AppKit.j" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-26 23:52:37) [GET]
+
+ActionController::RoutingError (No route matches "/Frameworks/Foundation/Foundation.j" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ArticlesController#index to js (for 127.0.0.1 at 2009-04-26 23:52:44) [GET]
+  Parameters: {"callback"=>"CPJSONPConnectionCallbacks.callback4449"}
+  [4;36;1mArticle Load (0.6ms)[0m   [0;1mSELECT * FROM "articles" [0m
+Completed in 8ms (View: 1, DB: 1) | 200 OK [http://localhost/articles.js?callback=CPJSONPConnectionCallbacks.callback4449]
+
+
+Processing CappsController#index (for 127.0.0.1 at 2009-04-26 23:58:30) [GET]
+  [4;35;1mCapp Load (30.5ms)[0m   [0mSELECT * FROM "capps" [0m
+Rendering template within layouts/capps
+Rendering capps/index
+Completed in 39ms (View: 2, DB: 31) | 200 OK [http://localhost/capps]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-26 23:58:30) [GET]
+
+ActionController::RoutingError (No route matches "/Frameworks/AppKit/AppKit.j" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-26 23:58:30) [GET]
+
+ActionController::RoutingError (No route matches "/Frameworks/Foundation/Foundation.j" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing CappsController#index (for 127.0.0.1 at 2009-04-26 23:58:46) [GET]
+  [4;36;1mCapp Load (9.7ms)[0m   [0;1mSELECT * FROM "capps" [0m
+Rendering template within layouts/capps
+Rendering capps/index
+Completed in 18ms (View: 2, DB: 10) | 200 OK [http://localhost/capps]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-26 23:58:46) [GET]
+
+ActionController::RoutingError (No route matches "/Frameworks/AppKit/AppKit.j" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-26 23:58:46) [GET]
+
+ActionController::RoutingError (No route matches "/Frameworks/Foundation/Foundation.j" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ArticlesController#index to js (for 127.0.0.1 at 2009-04-26 23:58:55) [GET]
+  Parameters: {"callback"=>"CPJSONPConnectionCallbacks.callback4450"}
+  [4;35;1mArticle Load (0.6ms)[0m   [0mSELECT * FROM "articles" [0m
+Completed in 9ms (View: 1, DB: 1) | 200 OK [http://localhost/articles.js?callback=CPJSONPConnectionCallbacks.callback4450]
+
+
+Processing CappsController#index (for 127.0.0.1 at 2009-04-27 00:06:35) [GET]
+  [4;36;1mCapp Load (25.4ms)[0m   [0;1mSELECT * FROM "capps" [0m
+Rendering template within layouts/capps
+Rendering capps/index
+Completed in 32ms (View: 2, DB: 25) | 200 OK [http://localhost/capps]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-27 00:06:36) [GET]
+
+ActionController::RoutingError (No route matches "/Frameworks/AppKit/AppKit.j" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-27 00:06:36) [GET]
+
+ActionController::RoutingError (No route matches "/Frameworks/Foundation/Foundation.j" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ArticlesController#index to js (for 127.0.0.1 at 2009-04-27 00:06:41) [GET]
+  Parameters: {"callback"=>"CPJSONPConnectionCallbacks.callback4587"}
+  [4;35;1mArticle Load (0.8ms)[0m   [0mSELECT * FROM "articles" [0m
+Completed in 11ms (View: 1, DB: 1) | 200 OK [http://localhost/articles.js?callback=CPJSONPConnectionCallbacks.callback4587]
+
+
+Processing CappsController#index (for 127.0.0.1 at 2009-04-27 00:07:11) [GET]
+  [4;36;1mCapp Load (65.1ms)[0m   [0;1mSELECT * FROM "capps" [0m
+Rendering template within layouts/capps
+Rendering capps/index
+Completed in 73ms (View: 2, DB: 65) | 200 OK [http://localhost/capps]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-27 00:07:11) [GET]
+
+ActionController::RoutingError (No route matches "/Frameworks/AppKit/AppKit.j" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-27 00:07:12) [GET]
+
+ActionController::RoutingError (No route matches "/Frameworks/Foundation/Foundation.j" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ArticlesController#index to js (for 127.0.0.1 at 2009-04-27 00:07:17) [GET]
+  Parameters: {"callback"=>"CPJSONPConnectionCallbacks.callback4568"}
+  [4;35;1mArticle Load (0.6ms)[0m   [0mSELECT * FROM "articles" [0m
+Completed in 10ms (View: 2, DB: 1) | 200 OK [http://localhost/articles.js?callback=CPJSONPConnectionCallbacks.callback4568]
+
+
+Processing CappsController#index (for 127.0.0.1 at 2009-04-27 00:07:58) [GET]
+  [4;36;1mCapp Load (22.3ms)[0m   [0;1mSELECT * FROM "capps" [0m
+Rendering template within layouts/capps
+Rendering capps/index
+Completed in 79ms (View: 1, DB: 22) | 200 OK [http://localhost/capps]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-27 00:07:58) [GET]
+
+ActionController::RoutingError (No route matches "/Frameworks/AppKit/AppKit.j" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-27 00:07:58) [GET]
+
+ActionController::RoutingError (No route matches "/Frameworks/Foundation/Foundation.j" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ArticlesController#index to js (for 127.0.0.1 at 2009-04-27 00:08:04) [GET]
+  Parameters: {"callback"=>"CPJSONPConnectionCallbacks.callback4579"}
+  [4;35;1mArticle Load (1.0ms)[0m   [0mSELECT * FROM "articles" [0m
+Completed in 9ms (View: 1, DB: 1) | 200 OK [http://localhost/articles.js?callback=CPJSONPConnectionCallbacks.callback4579]
+
+
+Processing CappsController#index (for 127.0.0.1 at 2009-04-27 00:09:45) [GET]
+  [4;36;1mCapp Load (69.4ms)[0m   [0;1mSELECT * FROM "capps" [0m
+Rendering template within layouts/capps
+Rendering capps/index
+Completed in 75ms (View: 1, DB: 69) | 200 OK [http://localhost/capps]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-27 00:09:45) [GET]
+
+ActionController::RoutingError (No route matches "/Frameworks/AppKit/AppKit.j" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-27 00:09:45) [GET]
+
+ActionController::RoutingError (No route matches "/Frameworks/Foundation/Foundation.j" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ArticlesController#index to js (for 127.0.0.1 at 2009-04-27 00:09:54) [GET]
+  Parameters: {"callback"=>"CPJSONPConnectionCallbacks.callback4589"}
+  [4;35;1mArticle Load (0.6ms)[0m   [0mSELECT * FROM "articles" [0m
+Completed in 9ms (View: 1, DB: 1) | 200 OK [http://localhost/articles.js?callback=CPJSONPConnectionCallbacks.callback4589]
+
+
+Processing CappsController#index (for 127.0.0.1 at 2009-04-27 00:13:38) [GET]
+  [4;36;1mCapp Load (24.7ms)[0m   [0;1mSELECT * FROM "capps" [0m
+Rendering template within layouts/capps
+Rendering capps/index
+Completed in 31ms (View: 1, DB: 25) | 200 OK [http://localhost/capps]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-27 00:13:38) [GET]
+
+ActionController::RoutingError (No route matches "/Frameworks/AppKit/AppKit.j" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-27 00:13:38) [GET]
+
+ActionController::RoutingError (No route matches "/Frameworks/Foundation/Foundation.j" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing CappsController#index (for 127.0.0.1 at 2009-04-27 00:14:33) [GET]
+  [4;35;1mCapp Load (0.4ms)[0m   [0mSELECT * FROM "capps" [0m
+Rendering template within layouts/capps
+Rendering capps/index
+Completed in 7ms (View: 3, DB: 0) | 200 OK [http://localhost/capps]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-27 00:14:34) [GET]
+
+ActionController::RoutingError (No route matches "/Frameworks/AppKit/AppKit.j" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-27 00:14:34) [GET]
+
+ActionController::RoutingError (No route matches "/Frameworks/Foundation/Foundation.j" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing CappsController#index (for 127.0.0.1 at 2009-04-27 00:16:14) [GET]
+  [4;36;1mCapp Load (0.4ms)[0m   [0;1mSELECT * FROM "capps" [0m
+Rendering template within layouts/capps
+Rendering capps/index
+Completed in 6ms (View: 1, DB: 0) | 200 OK [http://localhost/capps]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-27 00:16:15) [GET]
+
+ActionController::RoutingError (No route matches "/Frameworks/AppKit/AppKit.j" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-27 00:16:15) [GET]
+
+ActionController::RoutingError (No route matches "/Frameworks/Foundation/Foundation.j" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing CappsController#index (for 127.0.0.1 at 2009-04-27 00:20:40) [GET]
+  [4;35;1mCapp Load (74.2ms)[0m   [0mSELECT * FROM "capps" [0m
+Rendering template within layouts/capps
+Rendering capps/index
+Completed in 82ms (View: 1, DB: 74) | 200 OK [http://localhost/capps]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-27 00:20:40) [GET]
+
+ActionController::RoutingError (No route matches "/Frameworks/AppKit/AppKit.j" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-27 00:20:40) [GET]
+
+ActionController::RoutingError (No route matches "/Frameworks/Foundation/Foundation.j" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing CappsController#index (for 127.0.0.1 at 2009-04-27 00:21:07) [GET]
+  [4;36;1mCapp Load (0.4ms)[0m   [0;1mSELECT * FROM "capps" [0m
+Rendering template within layouts/capps
+Rendering capps/index
+Completed in 6ms (View: 1, DB: 0) | 200 OK [http://localhost/capps]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-27 00:21:07) [GET]
+
+ActionController::RoutingError (No route matches "/Frameworks/AppKit/AppKit.j" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-27 00:21:07) [GET]
+
+ActionController::RoutingError (No route matches "/Frameworks/Foundation/Foundation.j" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ArticlesController#index to js (for 127.0.0.1 at 2009-04-27 00:21:16) [GET]
+  Parameters: {"callback"=>"CPJSONPConnectionCallbacks.callback4551"}
+  [4;35;1mArticle Load (0.7ms)[0m   [0mSELECT * FROM "articles" [0m
+Completed in 9ms (View: 1, DB: 1) | 200 OK [http://localhost/articles.js?callback=CPJSONPConnectionCallbacks.callback4551]
+
+
+Processing CappsController#index (for 127.0.0.1 at 2009-04-27 00:21:52) [GET]
+  [4;36;1mCapp Load (0.4ms)[0m   [0;1mSELECT * FROM "capps" [0m
+Rendering template within layouts/capps
+Rendering capps/index
+Completed in 7ms (View: 1, DB: 0) | 200 OK [http://localhost/capps]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-27 00:21:53) [GET]
+
+ActionController::RoutingError (No route matches "/Frameworks/AppKit/AppKit.j" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-27 00:21:53) [GET]
+
+ActionController::RoutingError (No route matches "/Frameworks/Foundation/Foundation.j" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing CappsController#index (for 127.0.0.1 at 2009-04-27 00:21:53) [GET]
+  [4;35;1mCapp Load (0.4ms)[0m   [0mSELECT * FROM "capps" [0m
+Rendering template within layouts/capps
+Rendering capps/index
+Completed in 6ms (View: 1, DB: 0) | 200 OK [http://localhost/capps]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-27 00:21:53) [GET]
+
+ActionController::RoutingError (No route matches "/Frameworks/AppKit/AppKit.j" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-27 00:21:53) [GET]
+
+ActionController::RoutingError (No route matches "/Frameworks/Foundation/Foundation.j" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ArticlesController#index to js (for 127.0.0.1 at 2009-04-27 00:21:58) [GET]
+  Parameters: {"callback"=>"CPJSONPConnectionCallbacks.callback4578"}
+  [4;36;1mArticle Load (0.5ms)[0m   [0;1mSELECT * FROM "articles" [0m
+Completed in 8ms (View: 1, DB: 1) | 200 OK [http://localhost/articles.js?callback=CPJSONPConnectionCallbacks.callback4578]
+
+
+Processing CappsController#index (for 127.0.0.1 at 2009-04-27 00:22:54) [GET]
+  [4;35;1mCapp Load (66.3ms)[0m   [0mSELECT * FROM "capps" [0m
+Rendering template within layouts/capps
+Rendering capps/index
+Completed in 118ms (View: 2, DB: 66) | 200 OK [http://localhost/capps]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-27 00:22:54) [GET]
+
+ActionController::RoutingError (No route matches "/Frameworks/AppKit/AppKit.j" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-27 00:22:54) [GET]
+
+ActionController::RoutingError (No route matches "/Frameworks/Foundation/Foundation.j" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing CappsController#index (for 127.0.0.1 at 2009-04-27 00:23:08) [GET]
+  [4;36;1mCapp Load (11.6ms)[0m   [0;1mSELECT * FROM "capps" [0m
+Rendering template within layouts/capps
+Rendering capps/index
+Completed in 17ms (View: 1, DB: 12) | 200 OK [http://localhost/capps]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-27 00:23:08) [GET]
+
+ActionController::RoutingError (No route matches "/Frameworks/AppKit/AppKit.j" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-27 00:23:08) [GET]
+
+ActionController::RoutingError (No route matches "/Frameworks/Foundation/Foundation.j" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing CappsController#index (for 127.0.0.1 at 2009-04-27 00:23:36) [GET]
+  [4;35;1mCapp Load (26.1ms)[0m   [0mSELECT * FROM "capps" [0m
+Rendering template within layouts/capps
+Rendering capps/index
+Completed in 34ms (View: 2, DB: 26) | 200 OK [http://localhost/capps]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-27 00:23:36) [GET]
+
+ActionController::RoutingError (No route matches "/Frameworks/AppKit/AppKit.j" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-27 00:23:36) [GET]
+
+ActionController::RoutingError (No route matches "/Frameworks/Foundation/Foundation.j" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing CappsController#index (for 127.0.0.1 at 2009-04-27 00:26:09) [GET]
+  [4;36;1mCapp Load (1.4ms)[0m   [0;1mSELECT * FROM "capps" [0m
+Rendering template within layouts/capps
+Rendering capps/index
+Completed in 8ms (View: 2, DB: 1) | 200 OK [http://localhost/capps]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-27 00:26:09) [GET]
+
+ActionController::RoutingError (No route matches "/Frameworks/AppKit/AppKit.j" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-27 00:26:09) [GET]
+
+ActionController::RoutingError (No route matches "/Frameworks/Foundation/Foundation.j" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ArticlesController#index to js (for 127.0.0.1 at 2009-04-27 00:26:14) [GET]
+  Parameters: {"callback"=>"CPJSONPConnectionCallbacks.callback4574"}
+  [4;35;1mArticle Load (0.7ms)[0m   [0mSELECT * FROM "articles" [0m
+Completed in 10ms (View: 1, DB: 1) | 200 OK [http://localhost/articles.js?callback=CPJSONPConnectionCallbacks.callback4574]
+
+
+Processing CappsController#index (for 127.0.0.1 at 2009-04-27 00:26:29) [GET]
+  [4;36;1mCapp Load (0.3ms)[0m   [0;1mSELECT * FROM "capps" [0m
+Rendering template within layouts/capps
+Rendering capps/index
+Completed in 5ms (View: 1, DB: 0) | 200 OK [http://localhost/capps]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-27 00:26:29) [GET]
+
+ActionController::RoutingError (No route matches "/Frameworks/AppKit/AppKit.j" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-27 00:26:29) [GET]
+
+ActionController::RoutingError (No route matches "/Frameworks/Foundation/Foundation.j" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ArticlesController#index to js (for 127.0.0.1 at 2009-04-27 00:26:36) [GET]
+  Parameters: {"callback"=>"CPJSONPConnectionCallbacks.callback4449"}
+  [4;35;1mArticle Load (0.7ms)[0m   [0mSELECT * FROM "articles" [0m
+Completed in 9ms (View: 1, DB: 1) | 200 OK [http://localhost/articles.js?callback=CPJSONPConnectionCallbacks.callback4449]
+
+
+Processing CappsController#index (for 127.0.0.1 at 2009-04-27 00:26:58) [GET]
+  [4;36;1mCapp Load (75.0ms)[0m   [0;1mSELECT * FROM "capps" [0m
+Rendering template within layouts/capps
+Rendering capps/index
+Completed in 80ms (View: 1, DB: 75) | 200 OK [http://localhost/capps]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-27 00:26:58) [GET]
+
+ActionController::RoutingError (No route matches "/Frameworks/AppKit/AppKit.j" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-27 00:26:58) [GET]
+
+ActionController::RoutingError (No route matches "/Frameworks/Foundation/Foundation.j" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ArticlesController#index to js (for 127.0.0.1 at 2009-04-27 00:27:04) [GET]
+  Parameters: {"callback"=>"CPJSONPConnectionCallbacks.callback4603"}
+  [4;35;1mArticle Load (0.6ms)[0m   [0mSELECT * FROM "articles" [0m
+Completed in 9ms (View: 1, DB: 1) | 200 OK [http://localhost/articles.js?callback=CPJSONPConnectionCallbacks.callback4603]
+
+
+Processing CappsController#index (for 127.0.0.1 at 2009-04-27 00:27:39) [GET]
+  [4;36;1mCapp Load (25.6ms)[0m   [0;1mSELECT * FROM "capps" [0m
+Rendering template within layouts/capps
+Rendering capps/index
+Completed in 32ms (View: 2, DB: 26) | 200 OK [http://localhost/capps]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-27 00:27:40) [GET]
+
+ActionController::RoutingError (No route matches "/Frameworks/AppKit/AppKit.j" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-27 00:27:40) [GET]
+
+ActionController::RoutingError (No route matches "/Frameworks/Foundation/Foundation.j" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing CappsController#index (for 127.0.0.1 at 2009-04-27 00:28:08) [GET]
+  [4;35;1mCapp Load (0.4ms)[0m   [0mSELECT * FROM "capps" [0m
+Rendering template within layouts/capps
+Rendering capps/index
+Completed in 5ms (View: 1, DB: 0) | 200 OK [http://localhost/capps]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-27 00:28:08) [GET]
+
+ActionController::RoutingError (No route matches "/Frameworks/AppKit/AppKit.j" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-27 00:28:08) [GET]
+
+ActionController::RoutingError (No route matches "/Frameworks/Foundation/Foundation.j" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ArticlesController#index to js (for 127.0.0.1 at 2009-04-27 00:28:18) [GET]
+  Parameters: {"callback"=>"CPJSONPConnectionCallbacks.callback4459"}
+  [4;36;1mArticle Load (0.7ms)[0m   [0;1mSELECT * FROM "articles" [0m
+Completed in 9ms (View: 1, DB: 1) | 200 OK [http://localhost/articles.js?callback=CPJSONPConnectionCallbacks.callback4459]
+
+
+Processing CappsController#index (for 127.0.0.1 at 2009-04-27 00:29:38) [GET]
+  [4;35;1mCapp Load (18.5ms)[0m   [0mSELECT * FROM "capps" [0m
+Rendering template within layouts/capps
+Rendering capps/index
+Completed in 25ms (View: 1, DB: 18) | 200 OK [http://localhost/capps]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-27 00:29:38) [GET]
+
+ActionController::RoutingError (No route matches "/Frameworks/AppKit/AppKit.j" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-27 00:29:38) [GET]
+
+ActionController::RoutingError (No route matches "/Frameworks/Foundation/Foundation.j" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ArticlesController#index to js (for 127.0.0.1 at 2009-04-27 00:29:43) [GET]
+  Parameters: {"callback"=>"CPJSONPConnectionCallbacks.callback4568"}
+  [4;36;1mArticle Load (0.7ms)[0m   [0;1mSELECT * FROM "articles" [0m
+Completed in 10ms (View: 1, DB: 1) | 200 OK [http://localhost/articles.js?callback=CPJSONPConnectionCallbacks.callback4568]
+
+
+Processing CappsController#index (for 127.0.0.1 at 2009-04-27 00:30:23) [GET]
+  [4;35;1mCapp Load (19.6ms)[0m   [0mSELECT * FROM "capps" [0m
+Rendering template within layouts/capps
+Rendering capps/index
+Completed in 27ms (View: 2, DB: 20) | 200 OK [http://localhost/capps]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-27 00:30:24) [GET]
+
+ActionController::RoutingError (No route matches "/Frameworks/AppKit/AppKit.j" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-27 00:30:24) [GET]
+
+ActionController::RoutingError (No route matches "/Frameworks/Foundation/Foundation.j" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ArticlesController#index to js (for 127.0.0.1 at 2009-04-27 00:30:33) [GET]
+  Parameters: {"callback"=>"CPJSONPConnectionCallbacks.callback4466"}
+  [4;36;1mArticle Load (0.6ms)[0m   [0;1mSELECT * FROM "articles" [0m
+Completed in 9ms (View: 1, DB: 1) | 200 OK [http://localhost/articles.js?callback=CPJSONPConnectionCallbacks.callback4466]
+
+
+Processing CappsController#index (for 127.0.0.1 at 2009-04-27 00:31:01) [GET]
+  [4;35;1mCapp Load (67.0ms)[0m   [0mSELECT * FROM "capps" [0m
+Rendering template within layouts/capps
+Rendering capps/index
+Completed in 75ms (View: 1, DB: 67) | 200 OK [http://localhost/capps]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-27 00:31:01) [GET]
+
+ActionController::RoutingError (No route matches "/Frameworks/AppKit/AppKit.j" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-27 00:31:01) [GET]
+
+ActionController::RoutingError (No route matches "/Frameworks/Foundation/Foundation.j" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ArticlesController#index to js (for 127.0.0.1 at 2009-04-27 00:31:08) [GET]
+  Parameters: {"callback"=>"CPJSONPConnectionCallbacks.callback4450"}
+  [4;36;1mArticle Load (0.8ms)[0m   [0;1mSELECT * FROM "articles" [0m
+Completed in 55ms (View: 1, DB: 1) | 200 OK [http://localhost/articles.js?callback=CPJSONPConnectionCallbacks.callback4450]
+
+
+Processing CappsController#index (for 127.0.0.1 at 2009-04-27 00:32:13) [GET]
+  [4;35;1mCapp Load (0.5ms)[0m   [0mSELECT * FROM "capps" [0m
+Rendering template within layouts/capps
+Rendering capps/index
+Completed in 8ms (View: 1, DB: 0) | 200 OK [http://localhost/capps]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-27 00:32:13) [GET]
+
+ActionController::RoutingError (No route matches "/Frameworks/AppKit/AppKit.j" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-27 00:32:13) [GET]
+
+ActionController::RoutingError (No route matches "/Frameworks/Foundation/Foundation.j" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ArticlesController#index to js (for 127.0.0.1 at 2009-04-27 00:32:21) [GET]
+  Parameters: {"callback"=>"CPJSONPConnectionCallbacks.callback4450"}
+  [4;36;1mArticle Load (0.6ms)[0m   [0;1mSELECT * FROM "articles" [0m
+Completed in 9ms (View: 1, DB: 1) | 200 OK [http://localhost/articles.js?callback=CPJSONPConnectionCallbacks.callback4450]
+
+
+Processing ArticlesController#index to js (for 127.0.0.1 at 2009-04-27 02:40:47) [GET]
+  Parameters: {"callback"=>"CPJSONPConnectionCallbacks.callback5980"}
+  [4;35;1mArticle Load (23.6ms)[0m   [0mSELECT * FROM "articles" [0m
+Completed in 219ms (View: 2, DB: 24) | 200 OK [http://localhost/articles.js?callback=CPJSONPConnectionCallbacks.callback5980]
+
+
+Processing ArticlesController#new (for 127.0.0.1 at 2009-04-27 02:41:25) [GET]
+Rendering template within layouts/articles
+Rendering articles/new
+Completed in 332ms (View: 287, DB: 0) | 200 OK [http://localhost/articles/new]
+
+
+Processing ArticlesController#create (for 127.0.0.1 at 2009-04-27 02:41:36) [POST]
+  Parameters: {"article"=>{"body"=>"pedro body", "title"=>"pedro"}, "commit"=>"Create", "authenticity_token"=>"2p2cvarqhIDJohLVxk6kDzlTJCm/8Q4c1TNofuIiw7s="}
+  [4;36;1mArticle Create (38.4ms)[0m   [0;1mINSERT INTO "articles" ("updated_at", "title", "body", "created_at") VALUES('2009-04-27 06:41:36', 'pedro', 'pedro body', '2009-04-27 06:41:36')[0m
+Redirected to http://localhost:3000/articles/3
+Completed in 122ms (DB: 38) | 302 Found [http://localhost/articles]
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2009-04-27 02:41:36) [GET]
+  Parameters: {"id"=>"3"}
+  [4;35;1mArticle Load (0.4ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."id" = 3) [0m
+Rendering template within layouts/articles
+Rendering articles/show
+Completed in 18ms (View: 4, DB: 0) | 200 OK [http://localhost/articles/3]
+
+
+Processing ArticlesController#index to js (for 127.0.0.1 at 2009-04-27 02:41:48) [GET]
+  Parameters: {"callback"=>"CPJSONPConnectionCallbacks.callback6931"}
+  [4;36;1mArticle Load (0.8ms)[0m   [0;1mSELECT * FROM "articles" [0m
+Completed in 10ms (View: 1, DB: 1) | 200 OK [http://localhost/articles.js?callback=CPJSONPConnectionCallbacks.callback6931]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-04-27 14:08:23) [GET]
+  [4;36;1mArticle Load (1.0ms)[0m   [0;1mSELECT * FROM "articles" [0m
+Rendering template within layouts/articles
+Rendering articles/index
+Completed in 107ms (View: 100, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-27 14:09:03) [GET]
+
+ActionController::RoutingError (No route matches "/capp" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing CappsController#index (for 127.0.0.1 at 2009-04-27 14:09:06) [GET]
+  [4;35;1mCapp Load (17.3ms)[0m   [0mSELECT * FROM "capps" [0m
+Rendering template within layouts/capps
+Rendering capps/index
+Completed in 48ms (View: 26, DB: 17) | 200 OK [http://localhost/capps]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-27 14:09:06) [GET]
+
+ActionController::RoutingError (No route matches "/Frameworks/AppKit/AppKit.j" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-27 14:09:06) [GET]
+
+ActionController::RoutingError (No route matches "/Frameworks/Foundation/Foundation.j" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ArticlesController#index to js (for 127.0.0.1 at 2009-04-27 14:09:13) [GET]
+  Parameters: {"callback"=>"CPJSONPConnectionCallbacks.callback4598"}
+  [4;36;1mArticle Load (0.7ms)[0m   [0;1mSELECT * FROM "articles" [0m
+Completed in 147ms (View: 1, DB: 1) | 200 OK [http://localhost/articles.js?callback=CPJSONPConnectionCallbacks.callback4598]
+
+
+Processing ArticlesController#index to js (for 127.0.0.1 at 2009-04-27 15:30:02) [GET]
+  Parameters: {"callback"=>"CPJSONPConnectionCallbacks.callback7483"}
+  [4;35;1mArticle Load (0.8ms)[0m   [0mSELECT * FROM "articles" [0m
+Completed in 9ms (View: 1, DB: 1) | 200 OK [http://localhost/articles.js?callback=CPJSONPConnectionCallbacks.callback7483]
+
+
+Processing CappsController#index (for 127.0.0.1 at 2009-04-27 15:53:45) [GET]
+  [4;36;1mCapp Load (1.4ms)[0m   [0;1mSELECT * FROM "capps" [0m
+Rendering template within layouts/capps
+Rendering capps/index
+Completed in 8ms (View: 1, DB: 1) | 200 OK [http://localhost/capps]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-27 15:53:46) [GET]
+
+ActionController::RoutingError (No route matches "/Frameworks/AppKit/AppKit.j" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-27 15:53:46) [GET]
+
+ActionController::RoutingError (No route matches "/Frameworks/Foundation/Foundation.j" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing CappsController#index (for 127.0.0.1 at 2009-04-27 15:56:19) [GET]
+  [4;35;1mCapp Load (0.3ms)[0m   [0mSELECT * FROM "capps" [0m
+Rendering template within layouts/capps
+Rendering capps/index
+Completed in 5ms (View: 1, DB: 0) | 200 OK [http://localhost/capps]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-27 15:56:19) [GET]
+
+ActionController::RoutingError (No route matches "/Frameworks/AppKit/AppKit.j" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-27 15:56:19) [GET]
+
+ActionController::RoutingError (No route matches "/Frameworks/Foundation/Foundation.j" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing CappsController#index (for 127.0.0.1 at 2009-04-27 15:56:45) [GET]
+  [4;36;1mCapp Load (0.4ms)[0m   [0;1mSELECT * FROM "capps" [0m
+Rendering template within layouts/capps
+Rendering capps/index
+Completed in 5ms (View: 1, DB: 0) | 200 OK [http://localhost/capps]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-27 15:56:45) [GET]
+
+ActionController::RoutingError (No route matches "/Frameworks/AppKit/AppKit.j" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-27 15:56:45) [GET]
+
+ActionController::RoutingError (No route matches "/Frameworks/Foundation/Foundation.j" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing CappsController#index (for 127.0.0.1 at 2009-04-27 15:58:08) [GET]
+  [4;35;1mCapp Load (0.4ms)[0m   [0mSELECT * FROM "capps" [0m
+Rendering template within layouts/capps
+Rendering capps/index
+Completed in 5ms (View: 1, DB: 0) | 200 OK [http://localhost/capps]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-27 15:58:08) [GET]
+
+ActionController::RoutingError (No route matches "/Frameworks/AppKit/AppKit.j" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-27 15:58:08) [GET]
+
+ActionController::RoutingError (No route matches "/Frameworks/Foundation/Foundation.j" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing CappsController#index (for 127.0.0.1 at 2009-04-27 15:59:15) [GET]
+  [4;36;1mCapp Load (0.3ms)[0m   [0;1mSELECT * FROM "capps" [0m
+Rendering template within layouts/capps
+Rendering capps/index
+Completed in 5ms (View: 1, DB: 0) | 200 OK [http://localhost/capps]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-27 15:59:15) [GET]
+
+ActionController::RoutingError (No route matches "/Frameworks/AppKit/AppKit.j" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-27 15:59:15) [GET]
+
+ActionController::RoutingError (No route matches "/Frameworks/Foundation/Foundation.j" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing CappsController#index (for 127.0.0.1 at 2009-04-27 16:00:16) [GET]
+  [4;35;1mCapp Load (0.3ms)[0m   [0mSELECT * FROM "capps" [0m
+Rendering template within layouts/capps
+Rendering capps/index
+Completed in 5ms (View: 1, DB: 0) | 200 OK [http://localhost/capps]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-27 16:00:16) [GET]
+
+ActionController::RoutingError (No route matches "/Frameworks/AppKit/AppKit.j" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-27 16:00:17) [GET]
+
+ActionController::RoutingError (No route matches "/Frameworks/Foundation/Foundation.j" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing CappsController#index (for 127.0.0.1 at 2009-04-27 16:06:09) [GET]
+  [4;36;1mCapp Load (0.4ms)[0m   [0;1mSELECT * FROM "capps" [0m
+Rendering template within layouts/capps
+Rendering capps/index
+Completed in 5ms (View: 1, DB: 0) | 200 OK [http://localhost/capps]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-27 16:06:09) [GET]
+
+ActionController::RoutingError (No route matches "/Frameworks/AppKit/AppKit.j" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-27 16:06:09) [GET]
+
+ActionController::RoutingError (No route matches "/Frameworks/Foundation/Foundation.j" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing CappsController#index (for 127.0.0.1 at 2009-04-27 16:07:46) [GET]
+  [4;35;1mCapp Load (0.4ms)[0m   [0mSELECT * FROM "capps" [0m
+Rendering template within layouts/capps
+Rendering capps/index
+Completed in 5ms (View: 1, DB: 0) | 200 OK [http://localhost/capps]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-27 16:07:46) [GET]
+
+ActionController::RoutingError (No route matches "/Frameworks/AppKit/AppKit.j" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-27 16:07:46) [GET]
+
+ActionController::RoutingError (No route matches "/Frameworks/Foundation/Foundation.j" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing CappsController#index (for 127.0.0.1 at 2009-04-27 16:08:52) [GET]
+  [4;36;1mCapp Load (0.3ms)[0m   [0;1mSELECT * FROM "capps" [0m
+Rendering template within layouts/capps
+Rendering capps/index
+Completed in 5ms (View: 1, DB: 0) | 200 OK [http://localhost/capps]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-27 16:08:52) [GET]
+
+ActionController::RoutingError (No route matches "/Frameworks/AppKit/AppKit.j" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-27 16:08:52) [GET]
+
+ActionController::RoutingError (No route matches "/Frameworks/Foundation/Foundation.j" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing CappsController#index (for 127.0.0.1 at 2009-04-27 16:11:34) [GET]
+  [4;35;1mCapp Load (0.3ms)[0m   [0mSELECT * FROM "capps" [0m
+Rendering template within layouts/capps
+Rendering capps/index
+Completed in 5ms (View: 1, DB: 0) | 200 OK [http://localhost/capps]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-27 16:11:35) [GET]
+
+ActionController::RoutingError (No route matches "/Frameworks/AppKit/AppKit.j" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-27 16:11:35) [GET]
+
+ActionController::RoutingError (No route matches "/Frameworks/Foundation/Foundation.j" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ArticlesController#index to js (for 127.0.0.1 at 2009-04-27 16:11:40) [GET]
+  Parameters: {"callback"=>"CPJSONPConnectionCallbacks.callback4585"}
+  [4;36;1mArticle Load (0.7ms)[0m   [0;1mSELECT * FROM "articles" [0m
+Completed in 8ms (View: 1, DB: 1) | 200 OK [http://localhost/articles.js?callback=CPJSONPConnectionCallbacks.callback4585]
+
+
+Processing CappsController#index (for 127.0.0.1 at 2009-04-27 16:12:18) [GET]
+  [4;35;1mCapp Load (0.4ms)[0m   [0mSELECT * FROM "capps" [0m
+Rendering template within layouts/capps
+Rendering capps/index
+Completed in 5ms (View: 1, DB: 0) | 200 OK [http://localhost/capps]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-27 16:12:18) [GET]
+
+ActionController::RoutingError (No route matches "/Frameworks/AppKit/AppKit.j" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-27 16:12:18) [GET]
+
+ActionController::RoutingError (No route matches "/Frameworks/Foundation/Foundation.j" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ArticlesController#index to js (for 127.0.0.1 at 2009-04-27 16:12:23) [GET]
+  Parameters: {"callback"=>"CPJSONPConnectionCallbacks.callback4587"}
+  [4;36;1mArticle Load (0.6ms)[0m   [0;1mSELECT * FROM "articles" [0m
+Completed in 8ms (View: 1, DB: 1) | 200 OK [http://localhost/articles.js?callback=CPJSONPConnectionCallbacks.callback4587]
+
+
+Processing CappsController#index (for 127.0.0.1 at 2009-04-27 16:15:31) [GET]
+  [4;35;1mCapp Load (0.3ms)[0m   [0mSELECT * FROM "capps" [0m
+Rendering template within layouts/capps
+Rendering capps/index
+Completed in 5ms (View: 1, DB: 0) | 200 OK [http://localhost/capps]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-27 16:15:32) [GET]
+
+ActionController::RoutingError (No route matches "/Frameworks/AppKit/AppKit.j" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-27 16:15:32) [GET]
+
+ActionController::RoutingError (No route matches "/Frameworks/Foundation/Foundation.j" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ArticlesController#index to js (for 127.0.0.1 at 2009-04-27 16:15:38) [GET]
+  Parameters: {"callback"=>"CPJSONPConnectionCallbacks.callback4577"}
+  [4;36;1mArticle Load (0.7ms)[0m   [0;1mSELECT * FROM "articles" [0m
+Completed in 8ms (View: 1, DB: 1) | 200 OK [http://localhost/articles.js?callback=CPJSONPConnectionCallbacks.callback4577]
+
+
+Processing CappsController#index (for 127.0.0.1 at 2009-04-27 16:17:30) [GET]
+  [4;35;1mCapp Load (0.3ms)[0m   [0mSELECT * FROM "capps" [0m
+Rendering template within layouts/capps
+Rendering capps/index
+Completed in 6ms (View: 1, DB: 0) | 200 OK [http://localhost/capps]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-27 16:17:30) [GET]
+
+ActionController::RoutingError (No route matches "/Frameworks/AppKit/AppKit.j" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-27 16:17:30) [GET]
+
+ActionController::RoutingError (No route matches "/Frameworks/Foundation/Foundation.j" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing CappsController#index (for 127.0.0.1 at 2009-04-27 16:17:56) [GET]
+  [4;36;1mCapp Load (0.4ms)[0m   [0;1mSELECT * FROM "capps" [0m
+Rendering template within layouts/capps
+Rendering capps/index
+Completed in 6ms (View: 1, DB: 0) | 200 OK [http://localhost/capps]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-27 16:17:57) [GET]
+
+ActionController::RoutingError (No route matches "/Frameworks/AppKit/AppKit.j" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-27 16:17:57) [GET]
+
+ActionController::RoutingError (No route matches "/Frameworks/Foundation/Foundation.j" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ArticlesController#index to js (for 127.0.0.1 at 2009-04-27 16:18:12) [GET]
+  Parameters: {"callback"=>"CPJSONPConnectionCallbacks.callback4588"}
+  [4;35;1mArticle Load (0.6ms)[0m   [0mSELECT * FROM "articles" [0m
+Completed in 8ms (View: 1, DB: 1) | 200 OK [http://localhost/articles.js?callback=CPJSONPConnectionCallbacks.callback4588]
+
+
+Processing CappsController#index (for 127.0.0.1 at 2009-04-27 16:18:42) [GET]
+  [4;36;1mCapp Load (0.4ms)[0m   [0;1mSELECT * FROM "capps" [0m
+Rendering template within layouts/capps
+Rendering capps/index
+Completed in 7ms (View: 1, DB: 0) | 200 OK [http://localhost/capps]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-27 16:18:43) [GET]
+
+ActionController::RoutingError (No route matches "/Frameworks/AppKit/AppKit.j" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-27 16:18:43) [GET]
+
+ActionController::RoutingError (No route matches "/Frameworks/Foundation/Foundation.j" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing CappsController#index (for 127.0.0.1 at 2009-04-27 16:19:01) [GET]
+  [4;35;1mCapp Load (0.3ms)[0m   [0mSELECT * FROM "capps" [0m
+Rendering template within layouts/capps
+Rendering capps/index
+Completed in 5ms (View: 1, DB: 0) | 200 OK [http://localhost/capps]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-27 16:19:02) [GET]
+
+ActionController::RoutingError (No route matches "/Frameworks/AppKit/AppKit.j" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-27 16:19:02) [GET]
+
+ActionController::RoutingError (No route matches "/Frameworks/Foundation/Foundation.j" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ArticlesController#index to js (for 127.0.0.1 at 2009-04-27 16:19:07) [GET]
+  Parameters: {"callback"=>"CPJSONPConnectionCallbacks.callback4597"}
+  [4;36;1mArticle Load (0.7ms)[0m   [0;1mSELECT * FROM "articles" [0m
+Completed in 8ms (View: 1, DB: 1) | 200 OK [http://localhost/articles.js?callback=CPJSONPConnectionCallbacks.callback4597]
+
+
+Processing CappsController#index (for 127.0.0.1 at 2009-04-27 16:19:39) [GET]
+  [4;35;1mCapp Load (0.4ms)[0m   [0mSELECT * FROM "capps" [0m
+Rendering template within layouts/capps
+Rendering capps/index
+Completed in 6ms (View: 1, DB: 0) | 200 OK [http://localhost/capps]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-27 16:19:39) [GET]
+
+ActionController::RoutingError (No route matches "/Frameworks/AppKit/AppKit.j" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-27 16:19:39) [GET]
+
+ActionController::RoutingError (No route matches "/Frameworks/Foundation/Foundation.j" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ArticlesController#index to js (for 127.0.0.1 at 2009-04-27 16:19:44) [GET]
+  Parameters: {"callback"=>"CPJSONPConnectionCallbacks.callback4583"}
+  [4;36;1mArticle Load (0.6ms)[0m   [0;1mSELECT * FROM "articles" [0m
+Completed in 8ms (View: 1, DB: 1) | 200 OK [http://localhost/articles.js?callback=CPJSONPConnectionCallbacks.callback4583]
+
+
+Processing CappsController#index (for 127.0.0.1 at 2009-04-27 16:19:59) [GET]
+  [4;35;1mCapp Load (0.4ms)[0m   [0mSELECT * FROM "capps" [0m
+Rendering template within layouts/capps
+Rendering capps/index
+Completed in 5ms (View: 1, DB: 0) | 200 OK [http://localhost/capps]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-27 16:19:59) [GET]
+
+ActionController::RoutingError (No route matches "/Frameworks/AppKit/AppKit.j" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-27 16:19:59) [GET]
+
+ActionController::RoutingError (No route matches "/Frameworks/Foundation/Foundation.j" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ArticlesController#index to js (for 127.0.0.1 at 2009-04-27 16:20:04) [GET]
+  Parameters: {"callback"=>"CPJSONPConnectionCallbacks.callback4593"}
+  [4;36;1mArticle Load (0.7ms)[0m   [0;1mSELECT * FROM "articles" [0m
+Completed in 9ms (View: 1, DB: 1) | 200 OK [http://localhost/articles.js?callback=CPJSONPConnectionCallbacks.callback4593]
+
+
+Processing CappsController#index (for 127.0.0.1 at 2009-04-27 16:20:22) [GET]
+  [4;35;1mCapp Load (0.4ms)[0m   [0mSELECT * FROM "capps" [0m
+Rendering template within layouts/capps
+Rendering capps/index
+Completed in 6ms (View: 1, DB: 0) | 200 OK [http://localhost/capps]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-27 16:20:23) [GET]
+
+ActionController::RoutingError (No route matches "/Frameworks/AppKit/AppKit.j" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-27 16:20:23) [GET]
+
+ActionController::RoutingError (No route matches "/Frameworks/Foundation/Foundation.j" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ArticlesController#index to js (for 127.0.0.1 at 2009-04-27 16:20:27) [GET]
+  Parameters: {"callback"=>"CPJSONPConnectionCallbacks.callback4458"}
+  [4;36;1mArticle Load (0.7ms)[0m   [0;1mSELECT * FROM "articles" [0m
+Completed in 9ms (View: 1, DB: 1) | 200 OK [http://localhost/articles.js?callback=CPJSONPConnectionCallbacks.callback4458]
+
+
+Processing CappsController#index (for 127.0.0.1 at 2009-04-27 16:21:49) [GET]
+  [4;35;1mCapp Load (0.4ms)[0m   [0mSELECT * FROM "capps" [0m
+Rendering template within layouts/capps
+Rendering capps/index
+Completed in 6ms (View: 1, DB: 0) | 200 OK [http://localhost/capps]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-27 16:21:50) [GET]
+
+ActionController::RoutingError (No route matches "/Frameworks/AppKit/AppKit.j" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-27 16:21:50) [GET]
+
+ActionController::RoutingError (No route matches "/Frameworks/Foundation/Foundation.j" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing CappsController#index (for 127.0.0.1 at 2009-04-27 16:21:56) [GET]
+  [4;36;1mCapp Load (0.4ms)[0m   [0;1mSELECT * FROM "capps" [0m
+Rendering template within layouts/capps
+Rendering capps/index
+Completed in 5ms (View: 1, DB: 0) | 200 OK [http://localhost/capps]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-27 16:21:57) [GET]
+
+ActionController::RoutingError (No route matches "/Frameworks/AppKit/AppKit.j" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-27 16:21:57) [GET]
+
+ActionController::RoutingError (No route matches "/Frameworks/Foundation/Foundation.j" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing CappsController#index (for 127.0.0.1 at 2009-04-27 16:22:11) [GET]
+  [4;35;1mCapp Load (0.3ms)[0m   [0mSELECT * FROM "capps" [0m
+Rendering template within layouts/capps
+Rendering capps/index
+Completed in 5ms (View: 1, DB: 0) | 200 OK [http://localhost/capps]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-27 16:22:11) [GET]
+
+ActionController::RoutingError (No route matches "/Frameworks/AppKit/AppKit.j" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-27 16:22:11) [GET]
+
+ActionController::RoutingError (No route matches "/Frameworks/Foundation/Foundation.j" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing CappsController#index (for 127.0.0.1 at 2009-04-27 16:23:10) [GET]
+  [4;36;1mCapp Load (0.5ms)[0m   [0;1mSELECT * FROM "capps" [0m
+Rendering template within layouts/capps
+Rendering capps/index
+Completed in 7ms (View: 1, DB: 0) | 200 OK [http://localhost/capps]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-27 16:23:11) [GET]
+
+ActionController::RoutingError (No route matches "/Frameworks/AppKit/AppKit.j" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-27 16:23:11) [GET]
+
+ActionController::RoutingError (No route matches "/Frameworks/Foundation/Foundation.j" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing CappsController#index (for 127.0.0.1 at 2009-04-27 16:24:17) [GET]
+  [4;35;1mCapp Load (0.5ms)[0m   [0mSELECT * FROM "capps" [0m
+Rendering template within layouts/capps
+Rendering capps/index
+Completed in 6ms (View: 1, DB: 0) | 200 OK [http://localhost/capps]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-27 16:24:18) [GET]
+
+ActionController::RoutingError (No route matches "/Frameworks/AppKit/AppKit.j" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-27 16:24:18) [GET]
+
+ActionController::RoutingError (No route matches "/Frameworks/Foundation/Foundation.j" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing CappsController#index (for 127.0.0.1 at 2009-04-27 16:26:09) [GET]
+  [4;36;1mCapp Load (0.4ms)[0m   [0;1mSELECT * FROM "capps" [0m
+Rendering template within layouts/capps
+Rendering capps/index
+Completed in 6ms (View: 1, DB: 0) | 200 OK [http://localhost/capps]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-27 16:26:09) [GET]
+
+ActionController::RoutingError (No route matches "/Frameworks/AppKit/AppKit.j" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-27 16:26:09) [GET]
+
+ActionController::RoutingError (No route matches "/Frameworks/Foundation/Foundation.j" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing CappsController#index (for 127.0.0.1 at 2009-04-27 16:26:42) [GET]
+  [4;35;1mCapp Load (0.4ms)[0m   [0mSELECT * FROM "capps" [0m
+Rendering template within layouts/capps
+Rendering capps/index
+Completed in 6ms (View: 1, DB: 0) | 200 OK [http://localhost/capps]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-27 16:26:42) [GET]
+
+ActionController::RoutingError (No route matches "/Frameworks/AppKit/AppKit.j" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-27 16:26:42) [GET]
+
+ActionController::RoutingError (No route matches "/Frameworks/Foundation/Foundation.j" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing CappsController#index (for 127.0.0.1 at 2009-04-27 16:27:27) [GET]
+  [4;36;1mCapp Load (0.4ms)[0m   [0;1mSELECT * FROM "capps" [0m
+Rendering template within layouts/capps
+Rendering capps/index
+Completed in 6ms (View: 1, DB: 0) | 200 OK [http://localhost/capps]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-27 16:27:27) [GET]
+
+ActionController::RoutingError (No route matches "/Frameworks/AppKit/AppKit.j" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-27 16:27:28) [GET]
+
+ActionController::RoutingError (No route matches "/Frameworks/Foundation/Foundation.j" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing CappsController#index (for 127.0.0.1 at 2009-04-27 16:28:17) [GET]
+  [4;35;1mCapp Load (0.3ms)[0m   [0mSELECT * FROM "capps" [0m
+Rendering template within layouts/capps
+Rendering capps/index
+Completed in 5ms (View: 1, DB: 0) | 200 OK [http://localhost/capps]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-27 16:28:17) [GET]
+
+ActionController::RoutingError (No route matches "/Frameworks/AppKit/AppKit.j" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-27 16:28:17) [GET]
+
+ActionController::RoutingError (No route matches "/Frameworks/Foundation/Foundation.j" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing CappsController#index (for 127.0.0.1 at 2009-04-27 16:28:46) [GET]
+  [4;36;1mCapp Load (0.4ms)[0m   [0;1mSELECT * FROM "capps" [0m
+Rendering template within layouts/capps
+Rendering capps/index
+Completed in 5ms (View: 1, DB: 0) | 200 OK [http://localhost/capps]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-27 16:28:47) [GET]
+
+ActionController::RoutingError (No route matches "/Frameworks/AppKit/AppKit.j" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-27 16:28:47) [GET]
+
+ActionController::RoutingError (No route matches "/Frameworks/Foundation/Foundation.j" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing CappsController#index (for 127.0.0.1 at 2009-04-27 16:29:40) [GET]
+  [4;35;1mCapp Load (0.5ms)[0m   [0mSELECT * FROM "capps" [0m
+Rendering template within layouts/capps
+Rendering capps/index
+Completed in 6ms (View: 1, DB: 0) | 200 OK [http://localhost/capps]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-27 16:29:41) [GET]
+
+ActionController::RoutingError (No route matches "/Frameworks/AppKit/AppKit.j" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-27 16:29:41) [GET]
+
+ActionController::RoutingError (No route matches "/Frameworks/Foundation/Foundation.j" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing CappsController#index (for 127.0.0.1 at 2009-04-27 16:30:28) [GET]
+  [4;36;1mCapp Load (0.4ms)[0m   [0;1mSELECT * FROM "capps" [0m
+Rendering template within layouts/capps
+Rendering capps/index
+Completed in 6ms (View: 1, DB: 0) | 200 OK [http://localhost/capps]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-27 16:30:28) [GET]
+
+ActionController::RoutingError (No route matches "/Frameworks/AppKit/AppKit.j" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-27 16:30:28) [GET]
+
+ActionController::RoutingError (No route matches "/Frameworks/Foundation/Foundation.j" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing CappsController#index (for 127.0.0.1 at 2009-04-27 16:30:51) [GET]
+  [4;35;1mCapp Load (0.4ms)[0m   [0mSELECT * FROM "capps" [0m
+Rendering template within layouts/capps
+Rendering capps/index
+Completed in 6ms (View: 1, DB: 0) | 200 OK [http://localhost/capps]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-27 16:30:51) [GET]
+
+ActionController::RoutingError (No route matches "/Frameworks/AppKit/AppKit.j" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-27 16:30:51) [GET]
+
+ActionController::RoutingError (No route matches "/Frameworks/Foundation/Foundation.j" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing CappsController#index (for 127.0.0.1 at 2009-04-27 16:31:25) [GET]
+  [4;36;1mCapp Load (0.4ms)[0m   [0;1mSELECT * FROM "capps" [0m
+Rendering template within layouts/capps
+Rendering capps/index
+Completed in 5ms (View: 1, DB: 0) | 200 OK [http://localhost/capps]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-27 16:31:25) [GET]
+
+ActionController::RoutingError (No route matches "/Frameworks/AppKit/AppKit.j" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-27 16:31:25) [GET]
+
+ActionController::RoutingError (No route matches "/Frameworks/Foundation/Foundation.j" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing CappsController#index (for 127.0.0.1 at 2009-04-27 16:31:34) [GET]
+  [4;35;1mCapp Load (0.4ms)[0m   [0mSELECT * FROM "capps" [0m
+Rendering template within layouts/capps
+Rendering capps/index
+Completed in 5ms (View: 1, DB: 0) | 200 OK [http://localhost/capps]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-27 16:31:35) [GET]
+
+ActionController::RoutingError (No route matches "/Frameworks/AppKit/AppKit.j" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-27 16:31:35) [GET]
+
+ActionController::RoutingError (No route matches "/Frameworks/Foundation/Foundation.j" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing CappsController#index (for 127.0.0.1 at 2009-04-27 16:35:40) [GET]
+  [4;36;1mCapp Load (0.3ms)[0m   [0;1mSELECT * FROM "capps" [0m
+Rendering template within layouts/capps
+Rendering capps/index
+Completed in 5ms (View: 1, DB: 0) | 200 OK [http://localhost/capps]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-27 16:35:40) [GET]
+
+ActionController::RoutingError (No route matches "/Frameworks/AppKit/AppKit.j" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-27 16:35:40) [GET]
+
+ActionController::RoutingError (No route matches "/Frameworks/Foundation/Foundation.j" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing CappsController#index (for 127.0.0.1 at 2009-04-27 16:38:26) [GET]
+  [4;35;1mCapp Load (0.4ms)[0m   [0mSELECT * FROM "capps" [0m
+Rendering template within layouts/capps
+Rendering capps/index
+Completed in 6ms (View: 1, DB: 0) | 200 OK [http://localhost/capps]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-27 16:38:26) [GET]
+
+ActionController::RoutingError (No route matches "/Frameworks/AppKit/AppKit.j" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-27 16:38:26) [GET]
+
+ActionController::RoutingError (No route matches "/Frameworks/Foundation/Foundation.j" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing CappsController#index (for 127.0.0.1 at 2009-04-27 16:38:38) [GET]
+  [4;36;1mCapp Load (0.5ms)[0m   [0;1mSELECT * FROM "capps" [0m
+Rendering template within layouts/capps
+Rendering capps/index
+Completed in 7ms (View: 2, DB: 0) | 200 OK [http://localhost/capps]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-27 16:38:38) [GET]
+
+ActionController::RoutingError (No route matches "/Frameworks/AppKit/AppKit.j" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-27 16:38:38) [GET]
+
+ActionController::RoutingError (No route matches "/Frameworks/Foundation/Foundation.j" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing CappsController#index (for 127.0.0.1 at 2009-04-27 16:38:44) [GET]
+  [4;35;1mCapp Load (0.4ms)[0m   [0mSELECT * FROM "capps" [0m
+Rendering template within layouts/capps
+Rendering capps/index
+Completed in 5ms (View: 1, DB: 0) | 200 OK [http://localhost/capps]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-27 16:38:45) [GET]
+
+ActionController::RoutingError (No route matches "/Frameworks/AppKit/AppKit.j" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-27 16:38:45) [GET]
+
+ActionController::RoutingError (No route matches "/Frameworks/Foundation/Foundation.j" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing CappsController#index (for 127.0.0.1 at 2009-04-27 16:38:56) [GET]
+  [4;36;1mCapp Load (0.6ms)[0m   [0;1mSELECT * FROM "capps" [0m
+Rendering template within layouts/capps
+Rendering capps/index
+Completed in 8ms (View: 2, DB: 1) | 200 OK [http://localhost/capps]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-27 16:38:57) [GET]
+
+ActionController::RoutingError (No route matches "/Frameworks/AppKit/AppKit.j" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-27 16:38:57) [GET]
+
+ActionController::RoutingError (No route matches "/Frameworks/Foundation/Foundation.j" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing CappsController#index (for 127.0.0.1 at 2009-04-27 16:39:08) [GET]
+  [4;35;1mCapp Load (1.1ms)[0m   [0mSELECT * FROM "capps" [0m
+Rendering template within layouts/capps
+Rendering capps/index
+Completed in 6ms (View: 1, DB: 1) | 200 OK [http://localhost/capps]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-27 16:39:08) [GET]
+
+ActionController::RoutingError (No route matches "/Frameworks/AppKit/AppKit.j" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-27 16:39:08) [GET]
+
+ActionController::RoutingError (No route matches "/Frameworks/Foundation/Foundation.j" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing CappsController#index (for 127.0.0.1 at 2009-04-27 16:39:32) [GET]
+  [4;36;1mCapp Load (0.4ms)[0m   [0;1mSELECT * FROM "capps" [0m
+Rendering template within layouts/capps
+Rendering capps/index
+Completed in 5ms (View: 1, DB: 0) | 200 OK [http://localhost/capps]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-27 16:39:32) [GET]
+
+ActionController::RoutingError (No route matches "/Frameworks/AppKit/AppKit.j" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-27 16:39:32) [GET]
+
+ActionController::RoutingError (No route matches "/Frameworks/Foundation/Foundation.j" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing CappsController#index (for 127.0.0.1 at 2009-04-27 16:40:02) [GET]
+  [4;35;1mCapp Load (0.4ms)[0m   [0mSELECT * FROM "capps" [0m
+Rendering template within layouts/capps
+Rendering capps/index
+Completed in 5ms (View: 1, DB: 0) | 200 OK [http://localhost/capps]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-27 16:40:02) [GET]
+
+ActionController::RoutingError (No route matches "/Frameworks/AppKit/AppKit.j" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-27 16:40:02) [GET]
+
+ActionController::RoutingError (No route matches "/Frameworks/Foundation/Foundation.j" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing CappsController#index (for 127.0.0.1 at 2009-04-27 16:41:32) [GET]
+  [4;36;1mCapp Load (0.3ms)[0m   [0;1mSELECT * FROM "capps" [0m
+Rendering template within layouts/capps
+Rendering capps/index
+Completed in 5ms (View: 1, DB: 0) | 200 OK [http://localhost/capps]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-27 16:41:32) [GET]
+
+ActionController::RoutingError (No route matches "/Frameworks/AppKit/AppKit.j" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-27 16:41:32) [GET]
+
+ActionController::RoutingError (No route matches "/Frameworks/Foundation/Foundation.j" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing CappsController#index (for 127.0.0.1 at 2009-04-27 16:41:45) [GET]
+  [4;35;1mCapp Load (0.4ms)[0m   [0mSELECT * FROM "capps" [0m
+Rendering template within layouts/capps
+Rendering capps/index
+Completed in 5ms (View: 1, DB: 0) | 200 OK [http://localhost/capps]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-27 16:41:45) [GET]
+
+ActionController::RoutingError (No route matches "/Frameworks/AppKit/AppKit.j" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-27 16:41:45) [GET]
+
+ActionController::RoutingError (No route matches "/Frameworks/Foundation/Foundation.j" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing CappsController#index (for 127.0.0.1 at 2009-04-27 16:42:25) [GET]
+  [4;36;1mCapp Load (0.4ms)[0m   [0;1mSELECT * FROM "capps" [0m
+Rendering template within layouts/capps
+Rendering capps/index
+Completed in 6ms (View: 1, DB: 0) | 200 OK [http://localhost/capps]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-27 16:42:26) [GET]
+
+ActionController::RoutingError (No route matches "/Frameworks/AppKit/AppKit.j" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-27 16:42:26) [GET]
+
+ActionController::RoutingError (No route matches "/Frameworks/Foundation/Foundation.j" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing CappsController#index (for 127.0.0.1 at 2009-04-27 16:43:14) [GET]
+  [4;35;1mCapp Load (0.4ms)[0m   [0mSELECT * FROM "capps" [0m
+Rendering template within layouts/capps
+Rendering capps/index
+Completed in 5ms (View: 1, DB: 0) | 200 OK [http://localhost/capps]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-27 16:43:14) [GET]
+
+ActionController::RoutingError (No route matches "/Frameworks/AppKit/AppKit.j" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-27 16:43:15) [GET]
+
+ActionController::RoutingError (No route matches "/Frameworks/Foundation/Foundation.j" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing CappsController#index (for 127.0.0.1 at 2009-04-27 16:44:05) [GET]
+  [4;36;1mCapp Load (0.4ms)[0m   [0;1mSELECT * FROM "capps" [0m
+Rendering template within layouts/capps
+Rendering capps/index
+Completed in 7ms (View: 1, DB: 0) | 200 OK [http://localhost/capps]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-27 16:44:05) [GET]
+
+ActionController::RoutingError (No route matches "/Frameworks/AppKit/AppKit.j" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-27 16:44:05) [GET]
+
+ActionController::RoutingError (No route matches "/Frameworks/Foundation/Foundation.j" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing CappsController#index (for 127.0.0.1 at 2009-04-27 16:44:11) [GET]
+  [4;35;1mCapp Load (0.4ms)[0m   [0mSELECT * FROM "capps" [0m
+Rendering template within layouts/capps
+Rendering capps/index
+Completed in 5ms (View: 1, DB: 0) | 200 OK [http://localhost/capps]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-27 16:44:12) [GET]
+
+ActionController::RoutingError (No route matches "/Frameworks/AppKit/AppKit.j" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-27 16:44:12) [GET]
+
+ActionController::RoutingError (No route matches "/Frameworks/Foundation/Foundation.j" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-04-27 17:16:57) [GET]
+  [4;36;1mArticle Load (0.8ms)[0m   [0;1mSELECT * FROM "articles" [0m
+Rendering template within layouts/articles
+Rendering articles/index
+Completed in 19ms (View: 14, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing ArticlesController#destroy (for 127.0.0.1 at 2009-04-27 17:17:03) [DELETE]
+  Parameters: {"authenticity_token"=>"L3MDI2CPa7htvUwVUqXTsAsjbCm6sLA4EBwCQ1Vmmu4=", "id"=>"3"}
+  [4;35;1mArticle Load (0.2ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."id" = 3) [0m
+  [4;36;1mArticle Destroy (0.4ms)[0m   [0;1mDELETE FROM "articles" WHERE "id" = 3[0m
+Redirected to http://localhost:3000/articles
+Completed in 53ms (DB: 1) | 302 Found [http://localhost/articles/3]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-04-27 17:17:03) [GET]
+  [4;35;1mArticle Load (0.6ms)[0m   [0mSELECT * FROM "articles" [0m
+Rendering template within layouts/articles
+Rendering articles/index
+Completed in 9ms (View: 4, DB: 1) | 200 OK [http://localhost/articles]
+
+
+Processing CappsController#index (for 127.0.0.1 at 2009-04-27 17:17:20) [GET]
+  [4;36;1mCapp Load (0.4ms)[0m   [0;1mSELECT * FROM "capps" [0m
+Rendering template within layouts/capps
+Rendering capps/index
+Completed in 16ms (View: 11, DB: 0) | 200 OK [http://localhost/capps]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-27 17:17:20) [GET]
+
+ActionController::RoutingError (No route matches "/Frameworks/AppKit/AppKit.j" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-27 17:17:20) [GET]
+
+ActionController::RoutingError (No route matches "/Frameworks/Foundation/Foundation.j" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)

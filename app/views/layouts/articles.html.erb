@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+    PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns = "http://www.w3.org/1999/xhtml" xml:lang = "en" lang = "en">
+<!--
+//
+//  index.html
+//  myapp
+//
+//  Created by __Me__ on __Date__.
+//  Copyright 2008 __MyCompanyName__. All rights reserved.
+//
+-->
+
+    <head>
+			<title>Articles: <%= controller.action_name %></title>
+			<%= stylesheet_link_tag 'scaffold' %>
+
+
+
+    </head>
+
+    <body>
+			<p style="color: green"><%= flash[:notice] %></p>
+
+			<%= yield %>
+</body>
+    
+</html>

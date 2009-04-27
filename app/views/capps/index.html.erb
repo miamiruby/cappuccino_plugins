@@ -1,0 +1,20 @@
+<h1>Listing capps</h1>
+
+<table>
+  <tr>
+    <th>Title</th>
+  </tr>
+
+<% @capps.each do |capp| %>
+  <tr>
+    <td><%=h capp.title %></td>
+    <td><%= link_to 'Show', capp %></td>
+    <td><%= link_to 'Edit', edit_capp_path(capp) %></td>
+    <td><%= link_to 'Destroy', capp, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New capp', new_capp_path %>
