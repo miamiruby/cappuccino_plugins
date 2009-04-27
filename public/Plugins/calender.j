@@ -1,16 +1,32 @@
-##
-# Origional Author: CodingMammoth
-# url: http://github.com/CodingMammoth
-# irc.freenode.org
-# #cappuccino
-##
+/*
+Origional Author: CodingMammoth
+url: http://github.com/CodingMammoth
+irc.freenode.org
+#cappuccino
+*/
 
 @implementation CalendarView: CPView
 {
 }
 
--(id)init {
-	self = [super initWithFrame:CGRectMake(0, 0, 200, 200)];
+-(id)loadCalendar {
+	self = [super initWithFrame:CGRectMake(400, 0, 200, 200)];
+	//calenderView = [self contentView];
+	//self = [super initWithFrame:CGRectMake(400, 0, 200, 200) styleMask:CPTitledWindowMask | CPResizableWindowMask | CPClosableWindowMask];
+	//self = [[CPWindow alloc] initWithFrame:CGRectMake(400, 0, 200, 200)];
+	//[self orderFront:self];
+	//self = [[CPWindow alloc] initWithFrame:CGRectMake(600.0, 100.0, 400.0, 300.0) styleMask:CPTitledWindowMask | CPResizableWindowMask | CPClosableWindowMask name:@"Calender"];
+	//calenderView = [self contentView]];
+	//[calenderView orderFront:self];
+	/*
+    var theWindow = [[CPWindow alloc] initWithContentRect:aContentRect styleMask:aStyleMask],
+        contentView = [theWindow contentView];
+        
+    [theWindow setTitle:aTitle];
+    
+    [theWindow orderFront:self];
+*/
+	
 	if (self) {
 		[self loadData];
 	}
@@ -83,7 +99,7 @@
 	str = str + " " + [lmonths objectAtIndex:today.getMonth()];
 	str = str + " " + (today.getYear() + 1900);
 	[dateField setStringValue:str];
-	[dateField setTextColor:[CPColor whiteColor]];
+	[dateField setTextColor:[CPColor blackColor]];
 	[dateField setFont:[CPFont boldSystemFontOfSize:13]];
 	[dateField setAlignment:CPCenterTextAlignment];
 	[self addSubview:dateField];
@@ -96,7 +112,7 @@
 		[dayOfWeek setBordered:NO];
 		[dayOfWeek setEditable:NO];
 		[dayOfWeek setStringValue:[sdays objectAtIndex:i]];
-		[dayOfWeek setTextColor:[CPColor whiteColor]];
+		[dayOfWeek setTextColor:[CPColor blackColor]];
 		[dayOfWeek setFont:[CPFont boldSystemFontOfSize:11]];
 		[dayOfWeek setAlignment:CPCenterTextAlignment];
 		[self addSubview:dayOfWeek];
@@ -117,7 +133,7 @@
 		[dayOfWeek setBordered:NO];
 		[dayOfWeek setEditable:NO];
 		[dayOfWeek setStringValue:i];
-		[dayOfWeek setTextColor:[CPColor whiteColor]];
+		[dayOfWeek setTextColor:[CPColor blackColor]];
 		[dayOfWeek setFont:[CPFont boldSystemFontOfSize:11]];
 		[dayOfWeek setAlignment:CPCenterTextAlignment];
 		
