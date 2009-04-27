@@ -1,0 +1,11 @@
+Just getting started with cappuccino and I figured I would setup a bunch of simple helpers..
+Feel Free to extend and play..
+Thanks to CodingMammoth for getting this started and giving me his calender component
+
+To Load this make sure you have rails 2.3 install along with cappucino 0.7b
+If you need to know how to setup 0.7b watch the cappucinocasts and make sure to remove .6 first.
+
+Then load the server
+>script/server
+
+and view at http://localhost:3000
